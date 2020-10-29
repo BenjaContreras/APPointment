@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "APPointment2"
+    }
+  },
+  "defaultProject": "APPointment2",
+  "cli": {
+    "analytics": false
+  }
 }
