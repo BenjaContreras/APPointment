@@ -6,7 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ConsultasCardComponent } from './components/consultas-card/consultas-card.component';
 import { EliminarCitaCardComponent } from './components/eliminar-cita-card/eliminar-cita-card.component';
 import { AgregarCitaCardComponent } from './components/agregar-cita-card/agregar-cita-card.component';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const Components = [
@@ -23,6 +23,7 @@ const Components = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   exports: [ ...Components]
 })

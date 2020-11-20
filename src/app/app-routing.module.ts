@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { InicioScreenComponent } from './visitante/screens/inicio-screen/inicio-screen.component';
-import { VisitanteModule } from './visitante/visitante.module';
 
 
 const routes: Routes = [

@@ -14,15 +14,15 @@ export class NavBarIzqComponent implements OnInit {
   }
 
   sesion(){
-    this.router.navigate(['/sesion-personal-doctor']);
+    this.router.navigate(['/doctor/sesion-personal-doctor']);
   }
 
   citas(){
-    this.router.navigate(['/sesion-personal-citas-doctor']);
+    this.router.navigate(['/doctor/sesion-personal-citas-doctor']);
   }
 
   ayuda(){
-    this.router.navigate(['/sesion-personal-ayuda-doctor']);
+    this.router.navigate(['/doctor/sesion-personal-ayuda-doctor']);
   }
 
 }

@@ -28,15 +28,15 @@ export class InicioSesionUsuarioScreenComponent implements OnInit {
   }
 
   SesionIniciada(){
-    this.router.navigate(['/sesion-personal-doctor-cambiar']);
+    this.router.navigate(['/paciente/sesion-personal-paciente']);
   }
 
   navegarPersonal(){
-    this.router.navigate(['/inicio-sesion-screen'])
+    this.router.navigate(['/doctor/inicio-sesion-screen'])
   }
 
   navegarUsuario(){
-    this.router.navigate(['/inicio-sesion-usuario-screen'])
+    this.router.navigate(['/paciente/inicio-sesion-usuario-screen'])
   }
 
   onSubmit(){

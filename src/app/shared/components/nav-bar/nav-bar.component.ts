@@ -18,19 +18,19 @@ export class NavBarComponent implements OnInit {
   }
 
   navegarinicioSesion(){
-    this.router.navigate(['paciente/inicio-sesion-screen']);
+    this.router.navigate(['/paciente/inicio-sesion-usuario-screen']);
   }
 
   navegarRegistrarse(){
-    this.router.navigate(['visitante/registrarse-screen']);
+    this.router.navigate(['/visitante/registrarse-screen']);
   }
 
   navegarCerrarSesion(){
-    this.router.navigate(['visitnate/inicio-screen']);
+    this.router.navigate(['/visitante/inicio-screen']);
   }
 
   navegarContacto(){
-    this.router.navigate(['visitante/contactanos-screen']);
+    this.router.navigate(['/visitante/contactanos-screen']);
   }
 
   public getUrl(): string{

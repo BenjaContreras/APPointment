@@ -7,22 +7,29 @@ import { InicioScreenComponent } from './screens/inicio-screen/inicio-screen.com
 import { RegistrarseScreenComponent } from './screens/registrarse-screen/registrarse-screen.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { PacienteModule } from '../paciente/paciente.module';
+import { DoctorModule } from '../doctor/doctor.module';
+import { CoreModule } from '../core/core.module';
 import { VisitanteComponent } from './visitante.component';
 
 
 const Components = [
+  VisitanteComponent,
   InicioScreenComponent,
   RegistrarseScreenComponent,
-  ContactanosScreenComponent
+  ContactanosScreenComponent,
 ];
 
 @NgModule({
-  declarations: [...Components, VisitanteComponent],
+  declarations: [...Components],
   imports: [
     CommonModule,
     VisitanteRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    PacienteModule,
+    DoctorModule,
+    CoreModule,
   ],
   exports: [...Components]
 })

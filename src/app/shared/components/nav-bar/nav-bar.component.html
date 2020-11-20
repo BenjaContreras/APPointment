@@ -23,25 +23,25 @@
       <!--agregar ng switch-->
 
         <div [ngSwitch]="getUrl()">
-            <p *ngSwitchCase="'/inicio-sesion-usuario-screen'">
+            <p *ngSwitchCase="'/paciente/inicio-sesion-usuario-screen'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarRegistrarse()"><span><i class="fas fa-user"></i></span> Registrate</button>
             </p>
-            <p *ngSwitchCase="'/inicio-sesion-screen'">
+            <p *ngSwitchCase="'/doctor/inicio-sesion-screen'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarRegistrarse()"><span><i class="fas fa-user"></i></span> Registrate</button>
             </p>
-            <p *ngSwitchCase="'/sesion-personal-doctor'">
+            <p *ngSwitchCase="'/doctor/sesion-personal-doctor'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
             </p>
-            <p *ngSwitchCase= "'visitante/inicio-screen'">
+            <p *ngSwitchCase= "'/visitante/inicio-screen'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarinicioSesion()"> <span><i class="fas fa-user"></i></span> Identificarse</button>
             </p>
-            <p *ngSwitchCase="'/sesion-personal-citas-doctor'">
+            <p *ngSwitchCase="'/doctor/sesion-personal-citas-doctor'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
             </p>
-            <p *ngSwitchCase="'/sesion-personal-ayuda-doctor'">
+            <p *ngSwitchCase="'/doctor/sesion-personal-ayuda-doctor'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
             </p>
-            <p *ngSwitchCase="'/registrarse-screen'">
+            <p *ngSwitchCase="'/visitante/registrarse-screen'">
             </p>
         </div>
     </div>

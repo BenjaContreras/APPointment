@@ -14,7 +14,7 @@ export class InicioScreenComponent implements OnInit {
   }
 
   navegarContactanos(){
-    this.router.navigate(['/contactanos-screen']);
+    this.router.navigate(['/visitantes/contactanos-screen']);
   }
 
 }

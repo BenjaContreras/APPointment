@@ -28,19 +28,19 @@ export class InicioSesionScreenComponent implements OnInit {
   }
   // temporal
   navegarSesionDoctor() {
-    this.router.navigate(['/sesion-personal-citas-doctor']);
+    this.router.navigate(['/doctor/sesion-personal-citas-doctor']);
   }
 
   SesionIniciada(){
-    this.router.navigate(['/sesion-personal-citas-doctor']);
+    this.router.navigate(['/doctor/sesion-personal-citas-doctor']);
   }
 
   navegarPersonal(){
-    this.router.navigate(['/inicio-sesion-screen'])
+    this.router.navigate(['/visitante/inicio-sesion-screen'])
   }
 
   navegarUsuario(){
-    this.router.navigate(['/inicio-sesion-usuario-screen'])
+    this.router.navigate(['/paciente/inicio-sesion-usuario-screen'])
   }
 
   onSubmit(){

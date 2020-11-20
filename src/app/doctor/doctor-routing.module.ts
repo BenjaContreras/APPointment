@@ -17,9 +17,10 @@ const routes: Routes = [
     path: '',
     component: DoctorComponent,
     children: [
-      { path: 'sesion-personal', component: SesionPersonalDoctorComponent },
-      { path: 'sesion-personal-ayuda', component: SesionPersonalAyudaDoctorComponent },
-      { path: 'sesion-personal-citas', component: SesionPersonalCitasDoctorComponent },
+      { path: 'inicio-sesion-screen', component: InicioSesionScreenComponent },
+      { path: 'sesion-personal-doctor', component: SesionPersonalDoctorComponent },
+      { path: 'sesion-personal-ayuda-doctor', component: SesionPersonalAyudaDoctorComponent },
+      { path: 'sesion-personal-citas-doctor', component: SesionPersonalCitasDoctorComponent },
     ]
   },
 ];

@@ -9,7 +9,7 @@ import { InicioSesionScreenComponent } from './screens/inicio-sesion-screen/inic
 import { SesionPersonalDoctorComponent } from './screens/sesion-personal-doctor/sesion-personal-doctor.component';
 import { SesionPersonalCitasDoctorComponent } from './screens/sesion-personal-citas-doctor/sesion-personal-citas-doctor.component';
 import { SesionPersonalAyudaDoctorComponent } from './screens/sesion-personal-ayuda-doctor/sesion-personal-ayuda-doctor.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
@@ -36,7 +36,8 @@ const Components = [
     MatIconModule,
     MatListModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   exports: [...Components]
 })
