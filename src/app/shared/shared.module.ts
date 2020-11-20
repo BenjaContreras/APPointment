@@ -6,9 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ConsultasCardComponent } from './components/consultas-card/consultas-card.component';
 import { EliminarCitaCardComponent } from './components/eliminar-cita-card/eliminar-cita-card.component';
 import { AgregarCitaCardComponent } from './components/agregar-cita-card/agregar-cita-card.component';
-import { InicioScreenComponent } from './screens/inicio-screen/inicio-screen.component';
-import { RegistrarseScreenComponent } from './screens/registrarse-screen/registrarse-screen.component';
-import { ContactanosScreenComponent } from './screens/contactanos-screen/contactanos-screen.component';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 
 const Components = [
@@ -18,15 +16,13 @@ const Components = [
   ConsultasCardComponent,
   EliminarCitaCardComponent,
   AgregarCitaCardComponent,
-  InicioScreenComponent,
-  RegistrarseScreenComponent,
-  ContactanosScreenComponent
 ];
 
 @NgModule({
   declarations: [ ...Components],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
   ],
   exports: [ ...Components]
 })

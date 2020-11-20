@@ -1,1 +1,77 @@
-<p>sesion-personal-ayuda-doctor works!</p>
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-lg-2 col-4 text-center pb-5 mt-1 bg-info">
+            <div class="row">
+                <div class="col" [ngStyle]="{'height': screenHeight + 'px'}">
+                    <app-nav-bar-izq></app-nav-bar-izq>
+                </div>
+            </div>
+        </div>
+
+        <!--MEDIO-->
+        <div class="col-lg-4 col-8">
+
+            <div class="container mce-text-center">
+                <select class="form-control col-md-10 mt-5 ">
+                    <option>Tipo Consulta</option>
+                    <option>Tipo Consulta 1</option>
+                    <option>Tipo Consulta 2</option>
+                    
+                  </select>
+                <div class="form-row mt-5">
+                    <div class="col-md-10 mb-3">
+                        <label for="validarNombre">Nombre:<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="validarNombre" value="ej: Agustin Ricardo" name="validarNombre" required>
+                    </div>
+                </div>
+
+                <div class="form-row mt-5">
+                    <div class="col-md-10 mb-6">
+                        <label for="validarRut">Rut:<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="validarRut" value="ej: 99999999-9" name="validarRut" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group blue-border mt-5 col-md-10">
+                <label for="TextoMensajeAyuda">Mensaje</label>
+                <textarea class="form-control" id="TextoMensajeAyuda" rows="3"></textarea>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-8">
+            <div class="container mce-text-center">
+                <select class="form-control col-md-10 mt-5 ">
+                    <option>Motivo Consulta</option>
+                    <option>Motivo Consulta 1</option>
+                    <option>Motivo Consulta 2</option>
+                  </select>
+                <div class="form-row mt-5">
+                    <div class="col-md-10 mb-3">
+                        <label for="validarEmail">Email:<span class="red">*</span></label>
+                        <input type="email" class="form-control" id="validarEmail" value="ej: xxx@dominio.yy" name="validarEmail" required>
+                    </div>
+                </div>
+                <div class="form-row mt-5">
+                    <div class="col-md-10 mb-6">
+                        <label for="validarTelefono">Telefono:<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="validarTelefono" value="999999999" name="validarTelefono" required>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-info waves-effect mt-5 col-md-10 ">Enviar</button>
+            </div>
+
+
+
+        </div>
+        <div class="col-2"></div>
+
+    </div>
+
+
+</div>
+
+<app-footer></app-footer>

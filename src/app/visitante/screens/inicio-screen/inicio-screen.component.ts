@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio-screen',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navegarContactanos(){
+    this.router.navigate(['/contactanos-screen']);
   }
 
 }

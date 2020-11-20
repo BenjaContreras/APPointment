@@ -1,1 +1,72 @@
-<p>inicio-sesion-usuario-screen works!</p>
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid mt-5">
+
+    <div class="row">
+        <div class=" col-lg-4 col-12 text-center"></div>
+        <div class=" col-lg-4 col-12 text-center">
+
+            <div class="card border-light text-white bg-info mb-3 mt-5" style="max-width: 40rem;">
+                <div class="card-header ">
+                    <h2>Iniciar Sesión</h2>
+                </div>
+                <div class="card-body bg-light ">
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-info btn-lg" (click)="navegarPersonal()"> <span><i class="fas fa-user-md"></i></span> Personal</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-light btn-lg btn-outline-success" (click)="navegarUsuario()" > <span><i class="fas fa-user"></i></span> Usuario</button>
+                        </div>
+                    </div>
+                  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                    
+                    <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+                
+                    <div id='formulario' [ngClass]="{lleno: mensaje}">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <mat-icon aria-hidden="false"  aria-label="Icono de usuario" inline=true>account_circle</mat-icon> 
+                                </span>
+                            </div>
+                            <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario" placeholder="Usuario">
+                            <div id='mensaje'>
+                                <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido  </small>
+                                <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.pattern">Formato email requerido</small>
+                            </div>
+                        </div>
+                
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <mat-icon aria-hidden="false"  aria-label="Password icono" inline=true>https</mat-icon> 
+                                </span>
+                            </div>
+                            <input id="password" class="form-control" type="password" formControlName="password" placeholder="Password">
+                            <div id='mensaje'>
+                                <small id="emailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
+                            </div>
+                        </div>
+                
+                        <button class="btn btn-info"  type="submit" [disabled]="!checkoutForm.valid" (click)="SesionIniciada()">Iniciar Sesión</button>
+                
+                    </div>
+                </form>
+                </div>
+              </div>
+
+        <div class=" col-lg-4 col-12 text-center"></div>
+        </div>
+
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 text-center mb-5">
+            <img src="/assets/2.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>
+

@@ -1,1 +1,19 @@
-<p>eliminar-cita-card works!</p>
+<div class="card" *ngIf="citaId">
+    <form class="form-inline p-2">
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref"> Elija la cita que desea eliminar </label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <option selected>Opciones</option> 
+          <option value="1">Cita 1</option>
+          <option value="2">Cita 2</option>
+          <option value="3">Cita 3</option>
+        </select>
+      
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlInline">
+          <label class="custom-control-label" for="customControlInline"> Seguro que desea eliminar?</label>
+        </div>
+        <div class="" [ngClass]="{lleno:mensaje}">
+            <button type="submit" class="btn btn-info my-1"><i class="fas fa-backspace fa-rotate-180"></i> Eliminar</button>
+        </div>
+      </form>
+</div>

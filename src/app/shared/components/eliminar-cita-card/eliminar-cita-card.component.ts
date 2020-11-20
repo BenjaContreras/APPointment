@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-eliminar-cita-card',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EliminarCitaCardComponent implements OnInit {
 
+  mensaje:string="";
+
+  @Input()
+  citaId: number;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.mensaje="Cita eliminada correctamente";
   }
 
 }

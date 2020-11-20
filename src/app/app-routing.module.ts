@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ContactanosScreenComponent } from './shared/screens/contactanos-screen/contactanos-screen.component';
-import { InicioScreenComponent } from './shared/screens/inicio-screen/inicio-screen.component';
-import { RegistrarseScreenComponent } from './shared/screens/registrarse-screen/registrarse-screen.component';
+import { InicioScreenComponent } from './visitante/screens/inicio-screen/inicio-screen.component';
+import { VisitanteModule } from './visitante/visitante.module';
+
 
 const routes: Routes = [
 
   {
     path: '',
-    component: InicioScreenComponent,
+    redirectTo: 'visitante/inicio-screen',
     pathMatch: 'full'
   },
   {
@@ -18,7 +18,19 @@ const routes: Routes = [
   {
     path: 'paciente',
     loadChildren: () => import('./paciente/paciente.module').then(PacienteModule => PacienteModule.PacienteModule)
-  }
+  },
+  {
+    path: 'visitante',
+    loadChildren: () => import('./visitante/visitante.module').then(VisitanteModule => VisitanteModule.VisitanteModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(AdminModule => AdminModule.AdminModule)
+  },
+  {
+    path: '**',
+    component: InicioScreenComponent,
+  },
 ];
 
 @NgModule({

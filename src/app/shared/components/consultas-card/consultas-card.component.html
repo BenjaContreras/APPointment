@@ -1,1 +1,55 @@
-<p>consultas-card works!</p>
+<div class="card  border-0 mb-3" style="max-width: 100%;">
+    <div [ngSwitch]="cita.estadoCita">
+        <div *ngSwitchCase="'Realizada'">
+            <i class="fas fa-circle" style= "color: #28a745"></i>
+                Realizada
+        </div>
+        <div *ngSwitchCase="'Pendiente'">
+            <i class="fas fa-circle" style= "color: #ffc107"></i>
+                Pendiente
+        </div>
+        <div *ngSwitchCase="'Cancelada'">
+            <i class="fas fa-circle" style= "color: #dc3545"></i>
+                Cancelada
+        </div>
+        <div *ngSwitchCase="'Reciente'">
+            <i class="fas fa-circle" style= "color: #17a2b8"></i>
+                Reciente
+            </div>
+        </div>
+        <!-- color circulo -->
+        <div class="border border-dark mt-2">
+            <ng-container [ngSwitch]="cita.estadoCita">
+                <div class="card-header bg-success"
+                    *ngSwitchCase="'Realizada'"
+                >
+                </div>
+                <div class="card-header bg-warning"
+                    *ngSwitchCase="'Pendiente'"
+                >
+                </div>
+                <div class="card-header bg-danger"
+                    *ngSwitchCase="'Cancelada'"
+                >
+                </div>
+                <div class="card-header bg-info"
+                    *ngSwitchCase="'Reciente'"
+                >
+                </div>
+            </ng-container>
+        <div class="card-body text-dark">
+        <h5 class="card-title mb-1">Paciente: </h5>{{cita.nombrePaciente}}
+        <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{cita.fechaSolicitud | date: "d/M/yyyy, h:mm a"}}
+        <p class="font-weight-bold mt-2 mb-1">Descripción: </p>{{cita.descripcion}}
+        <div class="card-text mt-2 mb-1"
+            *ngIf="cita.motivoCancelacion"
+        >
+            <p class="font-weight-bold mt-2 mb-1">Motivo cancelación: </p>{{cita.motivoCancelacion}}
+            <p class="font-weight-bold mt-2 mb-1">Responsable de cancelación: </p>{{cita.personaCancelar}}
+        </div>
+    </div>
+    <!-- body card -->
+        </div>
+        <!-- color cabeza card -->
+    
+</div>

@@ -1,0 +1,132 @@
+<app-nav-bar></app-nav-bar>
+<!--
+  <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+  </div>
+-->
+<div class="container-fluid mt-5">
+  <div class="row mb-5">
+      <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+
+      <div class=" col-lg-6 col-12 text-center pr-5 pl-5">
+        <div class="card border-light  bg-info mb-3 mt-5" >
+          <div class="card-header ">
+            <h1 class="text-white"> <span><i class="fas fa-users"></i></span> Registrate</h1>
+          </div>
+          <div class="card-body bg-light ">
+              <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                <div id='formulario' [ngClass]="{lleno: mensaje}">
+
+                  <div class="">
+                    <label for="nombre">Nombres</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend"></div>
+                      <input id="nombre" name='nombre' class="form-control" type="text" formControlName="nombre"
+                        placeholder="Nombre">
+                      <div id='mensaje'>
+                        <small id="nombreHelp" class="form-text text-muted"
+                          *ngIf="(nombre.dirty || nombre.touched) && nombre.invalid && nombre.errors.required"> Requerido
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+              
+
+                <div class="">
+                  <label for="apellido">Apellidos</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input id="apellido" name='apellido' class="form-control" type="text" formControlName="apellido"
+                      placeholder="Apellidos">
+                    <div id='mensaje'>
+                      <small id="apellidoHelp" class="form-text text-muted"
+                        *ngIf="(apellido.dirty || apellido.touched) && apellido.invalid && apellido.errors.required">
+                        Requerido </small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="">
+                  <label for="rut">Rut</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input id="rut" name='rut' class="form-control" type="text" formControlName="rut"
+                      placeholder="1111111-1">
+                    <div id='mensaje'>
+                      <small id="rutHelp" class="form-text text-muted"
+                        *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"> Requerido </small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="">
+                  <label for="usuario">Email</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario"
+                      placeholder="email@example.com">
+                    <div id='mensaje'>
+                      <small id="emailHelp" class="form-text text-muted"
+                        *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido
+                      </small>
+                      <small id="emailHelp" class="form-text text-muted"
+                        *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.pattern">Formato
+                        email requerido</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="">
+                  <label for="password">Contraseña</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input id="password" class="form-control" type="text" formControlName="password"
+                      placeholder="Contraseña">
+                    <div id='mensaje'>
+                      <small id="emailHelp" class="form-text text-muted"
+                        *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required">
+                        Requerido </small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="">
+                  <label for="password2">Repetir Contraseña</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input id="password2" class="form-control" type="text" formControlName="password2"
+                      placeholder="Contraseña">
+                    <div id='mensaje'>
+                      <small id="password2Help" class="form-text text-muted"
+                        *ngIf="(password2.dirty || password2.touched) && password2.invalid && password2.errors.required">
+                        Requerido </small>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid">Registrar</button>
+
+                
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-6 col-12 text-center">
+        <div class="row mt-5">
+          <div class="col-12 text-center mb-5">
+              <img src="/assets/2.png" class="img-fluid" alt="Responsive image">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
+
+
