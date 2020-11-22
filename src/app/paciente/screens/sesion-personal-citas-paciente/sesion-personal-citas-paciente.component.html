@@ -1,1 +1,82 @@
-<p>sesion-personal-citas-paciente works!</p>
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-2 d-none d-lg-block mt-1 bg-info">
+            <div class="row">
+                <div class="col" [ngStyle]="{'height': screenHeight + 'px'}">
+                    <app-nav-bar-izq></app-nav-bar-izq>
+                </div>
+            </div>
+        </div>
+        <!-- col-2 izquierda -->
+        <div class="col-lg-10 col-12"> <!-- quiero agregar un padding left -->
+            <div class="row bg-light p-2">
+                <div class="col-4">
+                    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                        (click)="setOption(1)"
+                    >
+                        <i class="fas fa-plus-circle"></i> Agregar cita
+                    </button>
+                </div>
+                <!-- col-4 -->
+                <div class="col-4">
+                    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                        (click)="setOption(2)"
+                    >
+                        <i class="fas fa-exchange-alt"></i> Modificar cita
+                    </button>
+                </div>
+                <!-- col-4 -->
+                <div class="col-4">
+                    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                        (click)="setOption(3)"
+                    >
+                        <i class="fas fa-trash-alt"></i> Eliminar cita
+                    </button>
+                </div>
+                <!-- col-4 -->
+            </div>
+            <!-- row -->
+            <div class="row mt-1">
+                <div class="col">
+                    <div class="collapse" id="collapseExample">
+                        <div [ngSwitch]="opciones">
+                            <div *ngSwitchCase="1">
+                                <app-agregar-cita-card></app-agregar-cita-card>
+                            </div>
+                            <div *ngSwitchCase="2">
+                                <app-modificar-cita
+                                    [citaId]="citaSeleccionada?._id"
+                                >
+                                </app-modificar-cita>
+                            </div>
+                            <div *ngSwitchCase="3">
+                                <app-eliminar-cita-card
+                                    [citaId]="citaSeleccionada?._id"
+                                ></app-eliminar-cita-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row mt-3">
+                <div class="col-lg-3 col-12"
+                    *ngFor="let cita of citas"
+                    (click)="seleccionarCita(cita)"
+                >
+                    <app-consultas-card
+                        [cita]="cita"
+                    >
+                    </app-consultas-card> 
+                </div>   
+                <!-- col 3 -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- col-10 central -->
+    </div>
+    <!--- row-->
+</div>
+<!-- container -->
+<app-footer></app-footer>

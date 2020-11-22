@@ -1,1 +1,115 @@
-<p>sesion-personal-ayuda-paciente works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-2 col-3 text-center pb-5 mt-1 bg-info">  
+      <div class="row">
+        <div class="col" [ngStyle]="{'height': screenHeight + 'px'}">
+          <app-nav-bar-izq></app-nav-bar-izq>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-lg-10 col-9 text-center mt-3">
+        <div class="row mt-4">
+          <div class="col-lg-2 col-12"></div>
+          <div class="col-lg-8 col-12">
+            <div class="card border-light  bg-info mb-3 mt-5">
+              <div class="card-header ">
+                <h1 class="text-white"> <span><i class="fas fa-address-card"></i></span> Contactanos</h1>
+              </div>
+              <div class="card-body bg-light ">
+                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                  <div id='formulario' [ngClass]="{lleno: mensaje}">
+
+                    <div class="">
+                      <label for="nombre">Nombres</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input id="nombre" name='nombre' class="form-control" type="text" formControlName="nombre"
+                          placeholder="Nombre">
+                        <div id='mensaje'>
+                          <small id="nombreHelp" class="form-text text-muted"
+                            *ngIf="(nombre.dirty || nombre.touched) && nombre.invalid && nombre.errors.required">
+                            Requerido
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="">
+                      <label for="apellido">Apellidos</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input id="apellido" name='apellido' class="form-control" type="text" formControlName="apellido"
+                          placeholder="Apellidos">
+                        <div id='mensaje'>
+                          <small id="apellidoHelp" class="form-text text-muted"
+                            *ngIf="(apellido.dirty || apellido.touched) && apellido.invalid && apellido.errors.required">
+                            Requerido </small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <label for="rut">Rut</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input id="rut" name='rut' class="form-control" type="text" formControlName="rut"
+                          placeholder="1111111-1">
+                        <div id='mensaje'>
+                          <small id="rutHelp" class="form-text text-muted"
+                            *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"> Requerido </small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <label for="usuario">Email</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario"
+                          placeholder="email@example.com">
+                        <div id='mensaje'>
+                          <small id="emailHelp" class="form-text text-muted"
+                            *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required">
+                            Requerido
+                          </small>
+                          <small id="emailHelp" class="form-text text-muted"
+                            *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.pattern">Formato
+                            email requerido</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <label for="consulta">Mensaje</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <textarea id="consulta" name='consulta' class="form-control" type="text"
+                          formControlName="consulta" placeholder="Mensaje"></textarea>
+                        <div id='mensaje'>
+                          <small id="mensajeHelp" class="form-text text-muted"
+                            *ngIf="(apellido.dirty || apellido.touched) && apellido.invalid && apellido.errors.required">
+                            Requerido </small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid">Enviar</button>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-12"></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

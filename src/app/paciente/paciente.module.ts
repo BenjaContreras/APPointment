@@ -9,12 +9,13 @@ import { InicioSesionUsuarioScreenComponent } from './screens/inicio-sesion-usua
 import { SesionPersonalPacienteComponent } from './screens/sesion-personal-paciente/sesion-personal-paciente.component';
 import { SesionPersonalAyudaPacienteComponent } from './screens/sesion-personal-ayuda-paciente/sesion-personal-ayuda-paciente.component';
 import { SesionPersonalCitasPacienteComponent } from './screens/sesion-personal-citas-paciente/sesion-personal-citas-paciente.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
+import { ContactanosEspecialPacienteComponent } from './screens/contactanos-especial-paciente/contactanos-especial-paciente.component';
 
 
 const Components = [
@@ -24,6 +25,7 @@ const Components = [
   SesionPersonalPacienteComponent,
   SesionPersonalAyudaPacienteComponent,
   SesionPersonalCitasPacienteComponent,
+  ContactanosEspecialPacienteComponent,
 ];
 
 @NgModule({
@@ -37,7 +39,8 @@ const Components = [
     MatIconModule,
     MatListModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   exports: [...Components]
 })

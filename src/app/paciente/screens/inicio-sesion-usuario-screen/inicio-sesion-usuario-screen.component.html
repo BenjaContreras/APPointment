@@ -46,7 +46,7 @@
                             <div id='mensaje'>
                                 <small id="emailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
                             </div>
-                        </div>
+                    </div>
                 
                         <button class="btn btn-info"  type="submit" [disabled]="!checkoutForm.valid" (click)="SesionIniciada()">Iniciar Sesión</button>
                 
