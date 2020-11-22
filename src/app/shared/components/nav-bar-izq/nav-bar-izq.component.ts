@@ -25,4 +25,21 @@ export class NavBarIzqComponent implements OnInit {
     this.router.navigate(['/doctor/sesion-personal-ayuda-doctor']);
   }
 
+  sesion2(){
+    this.router.navigate(['/paciente/sesion-personal-paciente']);
+  }
+
+  citas2(){
+    this.router.navigate(['/paciente/sesion-personal-citas-paciente']);
+  }
+
+  ayuda2(){
+    this.router.navigate(['/paciente/sesion-personal-ayuda-paciente']);
+  }
+
+  public getUrl(): string{
+    return this.router.url;
+  }
+
+
 }

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-contactanos-screen',
   templateUrl: './contactanos-screen.component.html',
-  styleUrls: ['./contactanos-screen.component.css']
+  styleUrls: ['./contactanos-screen.component.less']
 })
 export class ContactanosScreenComponent implements OnInit {
 

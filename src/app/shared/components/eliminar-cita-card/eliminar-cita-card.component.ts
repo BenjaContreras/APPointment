@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eliminar-cita-card',
@@ -12,13 +13,17 @@ export class EliminarCitaCardComponent implements OnInit {
   @Input()
   citaId: number;
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
     this.mensaje="Cita eliminada correctamente";
+  }
+
+  public getUrl(): string{
+    return this.router.url;
   }
 
 }

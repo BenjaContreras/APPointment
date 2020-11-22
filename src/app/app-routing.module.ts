@@ -12,19 +12,23 @@ const routes: Routes = [
   },
   {
     path: 'doctor',
-    loadChildren: () => import('./doctor/doctor.module').then(DoctorModule => DoctorModule.DoctorModule)
+    loadChildren: () => import('./doctor/doctor.module')
+      .then(DoctorModule => DoctorModule.DoctorModule)
   },
   {
     path: 'paciente',
-    loadChildren: () => import('./paciente/paciente.module').then(PacienteModule => PacienteModule.PacienteModule)
+    loadChildren: () => import('./paciente/paciente.module')
+      .then(PacienteModule => PacienteModule.PacienteModule)
   },
   {
     path: 'visitante',
-    loadChildren: () => import('./visitante/visitante.module').then(VisitanteModule => VisitanteModule.VisitanteModule)
+    loadChildren: () => import('./visitante/visitante.module')
+      .then(VisitanteModule => VisitanteModule.VisitanteModule)
   },
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then(AdminModule => AdminModule.AdminModule)
+    loadChildren: () => import('./admin/admin.module')
+      .then(AdminModule => AdminModule.AdminModule)
   },
   {
     path: '**',

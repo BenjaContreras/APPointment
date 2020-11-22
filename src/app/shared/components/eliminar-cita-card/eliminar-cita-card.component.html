@@ -1,19 +1,33 @@
-<div class="card" *ngIf="citaId">
-    <form class="form-inline p-2">
-        <label class="my-1 mr-2" for="inlineFormCustomSelectPref"> Elija la cita que desea eliminar </label>
-        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-          <option selected>Opciones</option> 
-          <option value="1">Cita 1</option>
-          <option value="2">Cita 2</option>
-          <option value="3">Cita 3</option>
-        </select>
-      
-        <div class="custom-control custom-checkbox my-1 mr-sm-2">
-          <input type="checkbox" class="custom-control-input" id="customControlInline">
-          <label class="custom-control-label" for="customControlInline"> Seguro que desea eliminar?</label>
-        </div>
-        <div class="" [ngClass]="{lleno:mensaje}">
-            <button type="submit" class="btn btn-info my-1"><i class="fas fa-backspace fa-rotate-180"></i> Eliminar</button>
-        </div>
+<div [ngSwitch]="getUrl()">
+  <div *ngSwitchCase="'/doctor/sesion-personal-citas-doctor'">
+    <div class="card" *ngIf="citaId">
+      <form class="form-inline p-2">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref"> Elija la cita que desea eliminar </label>
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <option selected>Opciones</option> 
+            <option value="1">Cita 1</option>
+            <option value="2">Cita 2</option>
+            <option value="3">Cita 3</option>
+          </select>
+        
+          <div class="custom-control custom-checkbox my-1 mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="customControlInline">
+            <label class="custom-control-label" for="customControlInline"> Seguro que desea eliminar?</label>
+          </div>
+          <div class="" [ngClass]="{lleno:mensaje}">
+              <button type="submit" class="btn btn-info my-1"><i class="fas fa-backspace fa-rotate-180"></i> Eliminar</button>
+          </div>
+        </form>
+    </div>
+  </div>
+  <div *ngSwitchCase="'/paciente/sesion-personal-citas-paciente'">
+    <div class="card" *ngIf="citaId">
+      <form class="form-inline p-2">
+          <h4 class="ml-2 mr-3">Para eliminar una cita, contactese con la administración </h4>
+          <div class="" [ngClass]="{lleno:mensaje}">
+              <a href="paciente/contactanos-especial-paciente" class="btn btn-info my-1"><i class="fas fa-phone-volume"></i> Contactanos</a>
+          </div>
       </form>
+    </div>
+  </div>
 </div>

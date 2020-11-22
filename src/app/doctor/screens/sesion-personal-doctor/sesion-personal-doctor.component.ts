@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sesion-personal-doctor',
   templateUrl: './sesion-personal-doctor.component.html',
-  styleUrls: ['./sesion-personal-doctor.component.css']
+  styleUrls: ['./sesion-personal-doctor.component.less']
 })
 export class SesionPersonalDoctorComponent implements OnInit {
 
@@ -79,6 +79,6 @@ export class SesionPersonalDoctorComponent implements OnInit {
 
     let { height } = window.screen;
 
-    this.screenHeight = height;
+    this.screenHeight = 800;
   }
 }

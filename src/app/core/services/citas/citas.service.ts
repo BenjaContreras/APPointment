@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Cita } from '../../models/citas-card.models';
-import { CITAS } from './CITAS:const';
+import { CITAS } from './CITAS.const';
 
 @Injectable({
   providedIn: 'root'
