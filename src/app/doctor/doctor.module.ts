@@ -10,11 +10,14 @@ import { SesionPersonalDoctorComponent } from './screens/sesion-personal-doctor/
 import { SesionPersonalCitasDoctorComponent } from './screens/sesion-personal-citas-doctor/sesion-personal-citas-doctor.component';
 import { SesionPersonalAyudaDoctorComponent } from './screens/sesion-personal-ayuda-doctor/sesion-personal-ayuda-doctor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
+import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
+import { HttpProvidersService } from '../core/providers/http/http-providers.service';
+import { DoctorProvidersService } from '../core/providers/doctor/doctor-providers.service';
 
 const Components = [
   DoctorComponent,
@@ -38,6 +41,11 @@ const Components = [
     MatMenuModule,
     MatInputModule,
     FormsModule
+  ],
+  providers: [
+    CitasProvidersService,
+    HttpProvidersService,
+    DoctorProvidersService
   ],
   exports: [...Components]
 })

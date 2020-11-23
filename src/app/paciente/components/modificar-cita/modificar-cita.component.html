@@ -51,7 +51,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid">Modificar</button>
+                        <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid"
+                            (click)="patchCita()"
+                        >Modificar</button>
                     </div>
                 </form>
             </div>

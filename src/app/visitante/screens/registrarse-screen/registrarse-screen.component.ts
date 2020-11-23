@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
+import { PacienteProvidersService } from 'src/app/core/providers/paciente/paciente-providers.service';
 
 @Component({
   selector: 'app-registrarse-screen',
@@ -12,10 +14,14 @@ export class RegistrarseScreenComponent implements OnInit {
   //email = new FormControl('', [Validators.required, Validators.email]);
   checkoutForm: FormGroup;
   mensaje:string="";
-  isDivVisible=false;
+  isDivVisible = false;
+  private datosFormulario: any[6];
 
 
-  constructor(private router: Router) { 
+  constructor(
+    private router: Router,
+    private pacienteProviderServices: PacienteProvidersService
+  ) { 
     this.checkoutForm = this.createFormGroup();
   }
 
@@ -28,7 +34,7 @@ export class RegistrarseScreenComponent implements OnInit {
 
   createFormGroup() {
     return new FormGroup({
-      usuario: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
+      mail: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
       password: new FormControl('',[Validators.required]),
       nombre: new FormControl('',[Validators.required]),
       apellido: new FormControl('',[Validators.required]),
@@ -42,23 +48,32 @@ export class RegistrarseScreenComponent implements OnInit {
     this.isDivVisible=true;
   }
 
-  get usuario() { return this.checkoutForm.get('usuario'); }
+  get mail() { return this.checkoutForm.get('mail'); }
   get password() { return this.checkoutForm.get('password'); }
   get nombre() { return this.checkoutForm.get('nombre'); }
   get apellido() { return this.checkoutForm.get('apellido'); }
   get rut() { return this.checkoutForm.get('rut'); }
   get password2() { return this.checkoutForm.get('password2'); }
 
+  // GUARDAR DATOS EN ARRAY
 
-  /*
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
+  public async postPaciente() { 
+    let datosFormulario = {
+      mail: this.checkoutForm.get('mail').value,
+      password: this.checkoutForm.get('password').value,
+      nombre: this.checkoutForm.get('nombre').value,
+      apellido: this.checkoutForm.get('apellido').value,
+      rut: this.checkoutForm.get('rut').value,
+      password2: this.checkoutForm.get('password2').value
+    };
+    console.log(datosFormulario);
+    try {
+      await this.pacienteProviderServices.addPaciente(datosFormulario).toPromise();
     }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    catch (error) {
+      alert("Error al añadir el contacto");
+    }
   }
-  */
 
 
 

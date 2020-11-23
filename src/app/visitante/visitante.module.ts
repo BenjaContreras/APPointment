@@ -11,6 +11,10 @@ import { PacienteModule } from '../paciente/paciente.module';
 import { DoctorModule } from '../doctor/doctor.module';
 import { CoreModule } from '../core/core.module';
 import { VisitanteComponent } from './visitante.component';
+import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
+import { HttpProvidersService } from '../core/providers/http/http-providers.service';
+import { ContactoProvidersService } from '../core/providers/contacto/contacto-providers.service';
+import { PacienteProvidersService } from '../core/providers/paciente/paciente-providers.service';
 
 
 const Components = [
@@ -30,6 +34,12 @@ const Components = [
     PacienteModule,
     DoctorModule,
     CoreModule,
+  ],
+  providers: [
+    CitasProvidersService,
+    ContactoProvidersService,
+    PacienteProvidersService,
+    HttpProvidersService
   ],
   exports: [...Components]
 })

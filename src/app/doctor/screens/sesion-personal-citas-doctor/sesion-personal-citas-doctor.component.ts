@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Cita } from 'src/app/core/models/citas-card.models';
+import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
@@ -10,13 +12,18 @@ import { CitasService } from 'src/app/core/services/citas/citas.service';
 export class SesionPersonalCitasDoctorComponent implements OnInit {
 
   public citas: Cita[];
+  public citas$: Observable<Cita[]>;
   public citaSeleccionada: Cita;
   public id: string | number;
   public screenHeight: number;
   public opciones: number;
 
-  constructor(private citasCard: CitasService) {
+  constructor(
+    private citasCard: CitasService,
+    private citasProviderServices: CitasProvidersService
+  ) {
     this.citaSeleccionada = null;
+    this.citas$ = this.getAllCitas();
   }
   
   ngOnInit(): void {
@@ -25,7 +32,6 @@ export class SesionPersonalCitasDoctorComponent implements OnInit {
     
     this.screenHeight = height;
     this.citas = this.citasCard.getAllCitas();
-    //this.cita = this.citasCard.getCitaByID(this.id);
   }
 
   setOption(numero: number) { 
@@ -34,6 +40,10 @@ export class SesionPersonalCitasDoctorComponent implements OnInit {
 
   seleccionarCita(cita: Cita) {
     this.citaSeleccionada = cita;
+  }
+
+  getAllCitas(): Observable<Cita[]> {
+    return this.citasProviderServices.getAllCitas();
   }
 
 }

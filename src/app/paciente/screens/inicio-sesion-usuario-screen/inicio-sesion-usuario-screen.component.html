@@ -26,13 +26,13 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">
-                                    <mat-icon aria-hidden="false"  aria-label="Icono de usuario" inline=true>account_circle</mat-icon> 
+                                    <mat-icon aria-hidden="false"  aria-label="Icono de mail" inline=true>account_circle</mat-icon> 
                                 </span>
                             </div>
-                            <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario" placeholder="Usuario">
+                            <input id="mail" name='mail' class="form-control" type="mail" formControlName="mail" placeholder="Usuario">
                             <div id='mensaje'>
-                                <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido  </small>
-                                <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.pattern">Formato email requerido</small>
+                                <small id="mailHelp" class="form-text text-muted" *ngIf="(mail.dirty || mail.touched) && mail.invalid && mail.errors.required"> Requerido  </small>
+                                <small id="mailHelp" class="form-text text-muted" *ngIf="(mail.dirty || mail.touched) && mail.invalid && mail.errors.pattern">Formato mail requerido</small>
                             </div>
                         </div>
                 
@@ -44,12 +44,12 @@
                             </div>
                             <input id="password" class="form-control" type="password" formControlName="password" placeholder="Password">
                             <div id='mensaje'>
-                                <small id="emailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
+                                <small id="mailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
                             </div>
                     </div>
                 
                         <button class="btn btn-info"  type="submit" [disabled]="!checkoutForm.valid" (click)="SesionIniciada()">Iniciar Sesión</button>
-                
+                        <!-- !!!!! AGREGAR PARA HACER LA PETICION POST !!!!!!!-->
                     </div>
                 </form>
                 </div>

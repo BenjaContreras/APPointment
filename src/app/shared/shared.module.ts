@@ -7,6 +7,8 @@ import { ConsultasCardComponent } from './components/consultas-card/consultas-ca
 import { EliminarCitaCardComponent } from './components/eliminar-cita-card/eliminar-cita-card.component';
 import { AgregarCitaCardComponent } from './components/agregar-cita-card/agregar-cita-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
+import { HttpProvidersService } from '../core/providers/http/http-providers.service';
 
 
 const Components = [
@@ -24,6 +26,10 @@ const Components = [
     CommonModule,
     ReactiveFormsModule,
     FormsModule
+  ],
+  providers: [
+    CitasProvidersService,
+    HttpProvidersService
   ],
   exports: [ ...Components]
 })

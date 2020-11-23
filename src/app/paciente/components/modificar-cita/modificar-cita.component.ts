@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
@@ -18,7 +19,11 @@ export class ModificarCitaComponent implements OnInit {
   public citaId: number;
 
 
-  constructor(private router: Router , private citasService: CitasService) { 
+  constructor(
+    private router: Router,
+    private citasService: CitasService,
+    private citasProviderServices: CitasProvidersService
+  ) { 
     this.checkoutForm = this.createFormGroup();
   }
 
@@ -52,5 +57,15 @@ export class ModificarCitaComponent implements OnInit {
   get descripcion() { return this.checkoutForm.get('descripcion').value }
   get fechaConsulta() { return this.checkoutForm.get('fechaConsulta').value }
 
+  // GUARDAR DATOS EN ARRAY
 
+  public patchCita() { 
+    let datosFormulario = {
+      paciente: this.checkoutForm.get('paciente').value,
+      descripcion: this.checkoutForm.get('descripcion').value,
+      fechaConsulta: this.checkoutForm.get('fechaConsulta').value,
+    };
+    console.log(datosFormulario);
+    return this.citasProviderServices.patchCita(datosFormulario);
+  }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cita } from 'src/app/core/models/citas-card.models';
+import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
@@ -19,7 +20,11 @@ export class AgregarCitaCardComponent implements OnInit {
   isDivVisible = false;
 
 
-  constructor(private router: Router , private citasService: CitasService) { 
+  constructor(
+    private router: Router,
+    private citasService: CitasService,
+    private citasProviderServices: CitasProvidersService
+  ) { 
     this.checkoutForm = this.createFormGroup();
   }
 
@@ -44,8 +49,26 @@ export class AgregarCitaCardComponent implements OnInit {
   }
 
   get paciente() { return this.checkoutForm.get('paciente').value; }
-  get descripcion() { return this.checkoutForm.get('descripcion').value }
-  get fechaConsulta() { return this.checkoutForm.get('fechaConsulta').value }
+  get descripcion() { return this.checkoutForm.get('descripcion').value; }
+  get fechaConsulta() { return this.checkoutForm.get('fechaConsulta').value; }
+
+  // GUARDAR DATOS EN ARRAY
+
+  public async postCita() { 
+    let datosFormulario = {
+      paciente: this.checkoutForm.get('paciente').value,
+      descripcion: this.checkoutForm.get('descripcion').value,
+      fechaConsulta: this.checkoutForm.get('fechaConsulta').value,
+      
+    };
+    console.log(datosFormulario);
+    try {
+      await this.citasProviderServices.addCita(datosFormulario).toPromise();
+    }
+    catch (error) {
+      alert("Error al añadir el contacto");
+    } 
+  }
 
 }
 

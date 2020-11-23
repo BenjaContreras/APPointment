@@ -64,17 +64,17 @@
                 </div>
 
                 <div class="">
-                  <label for="usuario">Email</label>
+                  <label for="mail">Email</label>
                   <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario"
+                    <input id="mail" name='mail' class="form-control" type="email" formControlName="mail"
                       placeholder="email@example.com">
                     <div id='mensaje'>
                       <small id="emailHelp" class="form-text text-muted"
-                        *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido
+                        *ngIf="(mail.dirty || mail.touched) && mail.invalid && mail.errors.required"> Requerido
                       </small>
                       <small id="emailHelp" class="form-text text-muted"
-                        *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.pattern">Formato
+                        *ngIf="(mail.dirty || mail.touched) && mail.invalid && mail.errors.pattern">Formato
                         email requerido</small>
                     </div>
                   </div>
@@ -108,7 +108,9 @@
                   </div>
                 </div>
 
-                <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid">Registrar</button>
+                <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid"
+                  (click)="postPaciente()"
+                >Registrar</button>
 
                 
                 </div>
