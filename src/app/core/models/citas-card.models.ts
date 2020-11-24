@@ -1,4 +1,4 @@
-export interface Cita{
+export interface Cita {
   _id: string | number;
   nombrePaciente: string;
   fechaSolicitud: Date;
@@ -6,4 +6,4 @@ export interface Cita{
   estadoCita: string;
   motivoCancelacion?: string;
   personaCancelar?: string;
-};
+}
