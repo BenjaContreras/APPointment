@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cita } from 'src/app/core/models/citas-card.models';
+import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 
 @Component({
   selector: 'app-eliminar-cita-card',
@@ -11,9 +13,12 @@ export class EliminarCitaCardComponent implements OnInit {
   mensaje:string="";
 
   @Input()
-  citaId: number;
+  citaId: Cita;
   
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private citasProviderServices: CitasProvidersService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +29,10 @@ export class EliminarCitaCardComponent implements OnInit {
 
   public getUrl(): string{
     return this.router.url;
+  }
+
+  deleteCita(cita: Cita) {
+    return this.citasProviderServices.deleteCita(cita);
   }
 
 }

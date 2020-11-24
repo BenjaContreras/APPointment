@@ -27,6 +27,6 @@ export class PacienteProvidersService {
   };
 
   public patchPaciente(Paciente: any): Partial<Observable<Paciente>>{
-    return this.httpService.post<Paciente>('/paciente/patch', Paciente);
+    return this.httpService.post<Paciente>('/paciente/:id', Paciente);
   };
 }

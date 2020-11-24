@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Cita } from 'src/app/core/models/citas-card.models';
 import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
-import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
   selector: 'app-agregar-cita-card',
@@ -21,8 +19,6 @@ export class AgregarCitaCardComponent implements OnInit {
 
 
   constructor(
-    private router: Router,
-    private citasService: CitasService,
     private citasProviderServices: CitasProvidersService
   ) { 
     this.checkoutForm = this.createFormGroup();
@@ -44,7 +40,6 @@ export class AgregarCitaCardComponent implements OnInit {
   onSubmit(){
     this.mensaje="Cita agregada correctamente";
     this.isDivVisible = true;
-    this.citasService.agregarCita(this.citaId,this.citaNew);
     this.checkoutForm.reset();
   }
 
@@ -61,9 +56,8 @@ export class AgregarCitaCardComponent implements OnInit {
       fechaConsulta: this.checkoutForm.get('fechaConsulta').value,
       
     };
-    console.log(datosFormulario);
     try {
-      await this.citasProviderServices.addCita(datosFormulario).toPromise();
+      await this.citasProviderServices.postCita(datosFormulario).toPromise();
     }
     catch (error) {
       alert("Error al añadir el contacto");

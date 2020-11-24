@@ -1,18 +1,18 @@
 <div class="card  border-0 mb-3" style="max-width: 100%;">
     <div [ngSwitch]="cita.estadoCita">
-        <div *ngSwitchCase="'Realizada'">
+        <div *ngSwitchCase="'realizada'">
             <i class="fas fa-circle" style= "color: #28a745"></i>
                 Realizada
         </div>
-        <div *ngSwitchCase="'Pendiente'">
+        <div *ngSwitchCase="'rendiente'">
             <i class="fas fa-circle" style= "color: #ffc107"></i>
                 Pendiente
         </div>
-        <div *ngSwitchCase="'Cancelada'">
+        <div *ngSwitchCase="'cancelada'">
             <i class="fas fa-circle" style= "color: #dc3545"></i>
                 Cancelada
         </div>
-        <div *ngSwitchCase="'Reciente'">
+        <div *ngSwitchCase="'reciente'">
             <i class="fas fa-circle" style= "color: #17a2b8"></i>
                 Reciente
             </div>
@@ -21,19 +21,19 @@
         <div class="border border-dark mt-2">
             <ng-container [ngSwitch]="cita.estadoCita">
                 <div class="card-header bg-success"
-                    *ngSwitchCase="'Realizada'"
+                    *ngSwitchCase="'realizada'"
                 >
                 </div>
                 <div class="card-header bg-warning"
-                    *ngSwitchCase="'Pendiente'"
+                    *ngSwitchCase="'pendiente'"
                 >
                 </div>
                 <div class="card-header bg-danger"
-                    *ngSwitchCase="'Cancelada'"
+                    *ngSwitchCase="'cancelada'"
                 >
                 </div>
                 <div class="card-header bg-info"
-                    *ngSwitchCase="'Reciente'"
+                    *ngSwitchCase="'reciente'"
                 >
                 </div>
             </ng-container>

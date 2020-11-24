@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
-import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
   selector: 'app-modificar-cita',
@@ -20,8 +18,6 @@ export class ModificarCitaComponent implements OnInit {
 
 
   constructor(
-    private router: Router,
-    private citasService: CitasService,
     private citasProviderServices: CitasProvidersService
   ) { 
     this.checkoutForm = this.createFormGroup();
@@ -43,13 +39,6 @@ export class ModificarCitaComponent implements OnInit {
   onSubmit(){
     this.mensaje="Cita modificada correctamente";
     this.isDivVisible = true;
-    this.citasService.modificarCita(this.citaId,
-      {
-        nombrePaciente: this.paciente,
-        descripcion: this.descripcion,
-        fechaSolicitud: this.fechaConsulta,
-      }
-    );
     this.checkoutForm.reset();
   }
 

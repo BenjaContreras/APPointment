@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PacienteProvidersService } from 'src/app/core/providers/paciente/paciente-providers.service';
 
 @Component({
   selector: 'app-sesion-personal-paciente',
@@ -16,7 +17,9 @@ export class SesionPersonalPacienteComponent implements OnInit {
   public ModificarRut: string;
   public screenHeight: number;
 
-  constructor() {
+  constructor(
+    private pacienteProviderServices: PacienteProvidersService
+  ) {
     this.URLfoto = 'https://falabella.scene7.com/is/image/Falabella/12005138_1?wid=1500&hei=1500&qlt=70';
     this.ModificarNombres = 'disabled';
     this.ModificarApellidos = 'disabled';
@@ -28,7 +31,8 @@ export class SesionPersonalPacienteComponent implements OnInit {
 
   modificaNombres() {
     if (this.ModificarNombres === 'disabled') {
-      this.ModificarNombres = ''
+      let paciente = this.pacienteProviderServices.getAPaciente();
+      return this.pacienteProviderServices.patchPaciente(paciente);
     } else[
       this.ModificarNombres = 'disabled'
     ]
@@ -36,7 +40,8 @@ export class SesionPersonalPacienteComponent implements OnInit {
 
   modificaApellidos() {
     if (this.ModificarApellidos === 'disabled') {
-      this.ModificarApellidos = ''
+      let paciente = this.pacienteProviderServices.getAPaciente();
+      return this.pacienteProviderServices.patchPaciente(paciente);
     } else[
       this.ModificarApellidos = 'disabled'
     ]
@@ -44,7 +49,8 @@ export class SesionPersonalPacienteComponent implements OnInit {
 
   modificaEmail() {
     if (this.ModificarEmail === 'disabled') {
-      this.ModificarEmail = ''
+      let paciente = this.pacienteProviderServices.getAPaciente();
+      return this.pacienteProviderServices.patchPaciente(paciente);
     } else[
       this.ModificarEmail = 'disabled'
     ]
@@ -52,7 +58,8 @@ export class SesionPersonalPacienteComponent implements OnInit {
 
   modificaFono() {
     if (this.ModificarFono === 'disabled') {
-      this.ModificarFono = ''
+      let paciente = this.pacienteProviderServices.getAPaciente();
+      return this.pacienteProviderServices.patchPaciente(paciente);
     } else[
       this.ModificarFono = 'disabled'
     ]
@@ -60,7 +67,8 @@ export class SesionPersonalPacienteComponent implements OnInit {
 
   modificaContrasena() {
     if (this.ModificarContrasena === 'disabled') {
-      this.ModificarContrasena = ''
+      let paciente = this.pacienteProviderServices.getAPaciente();
+      return this.pacienteProviderServices.patchPaciente(paciente);
     } else[
       this.ModificarContrasena = 'disabled'
     ]
@@ -68,7 +76,8 @@ export class SesionPersonalPacienteComponent implements OnInit {
 
   modificaRut() {
     if (this.ModificarRut === 'disabled') {
-      this.ModificarRut = ''
+      let paciente = this.pacienteProviderServices.getAPaciente();
+      return this.pacienteProviderServices.patchPaciente(paciente);
     } else[
       this.ModificarRut = 'disabled'
     ]

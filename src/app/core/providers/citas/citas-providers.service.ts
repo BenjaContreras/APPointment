@@ -14,7 +14,7 @@ export class CitasProvidersService {
     return this.httpService.get<Cita[]>('/cita/all');
   };
 
-  public addCita(cita: any): Observable<Cita> {
+  public postCita(cita: any): Observable<Cita> {
     return this.httpService.post<Cita>('/cita/add', cita);
   };
 

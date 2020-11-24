@@ -27,6 +27,6 @@ export class ContactoPersonalProvidersService {
   };
 
   public patchContactoPersonal(ContactoPersonal: any): Partial<Observable<ContactoPersonal>>{
-    return this.httpService.post<ContactoPersonal>('/contactoPersonal/patch', ContactoPersonal);
+    return this.httpService.post<ContactoPersonal>('/contactoPersonal/:id', ContactoPersonal);
   };
 }

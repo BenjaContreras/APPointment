@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DoctorProvidersService } from 'src/app/core/providers/doctor/doctor-providers.service';
+import { ContactoProvidersService } from 'src/app/core/providers/contacto/contacto-providers.service';
 
 @Component({
   selector: 'app-sesion-personal-ayuda-doctor',
@@ -17,7 +17,7 @@ export class SesionPersonalAyudaDoctorComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private doctorProviderServices: DoctorProvidersService
+    private contactoProviderServices: ContactoProvidersService
   ) {
     this.checkoutForm = this.createFormGroup();
   }
@@ -55,7 +55,7 @@ export class SesionPersonalAyudaDoctorComponent implements OnInit {
 
   // GUARDAR DATOS EN ARRAY
 
-  public patchDoctor() { 
+  public postContacto() { 
     let datosFormulario = {
       mail: this.checkoutForm.get('mail').value,
       nombre: this.checkoutForm.get('nombre').value,
@@ -64,7 +64,7 @@ export class SesionPersonalAyudaDoctorComponent implements OnInit {
       consulta: this.checkoutForm.get('consulta').value,
     };
     console.log(datosFormulario);
-    return this.doctorProviderServices.patchDoctor(datosFormulario);
+    return this.contactoProviderServices.addContacto(datosFormulario);
   }
 
 }

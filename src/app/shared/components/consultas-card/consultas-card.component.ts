@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Cita } from 'src/app/core/models/citas-card.models';
-import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
   selector: 'app-consultas-card',

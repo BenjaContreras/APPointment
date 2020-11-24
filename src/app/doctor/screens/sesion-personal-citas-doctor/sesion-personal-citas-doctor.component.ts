@@ -11,7 +11,6 @@ import { CitasService } from 'src/app/core/services/citas/citas.service';
 })
 export class SesionPersonalCitasDoctorComponent implements OnInit {
 
-  public citas: Cita[];
   public citas$: Observable<Cita[]>;
   public citaSeleccionada: Cita;
   public id: string | number;
@@ -19,7 +18,6 @@ export class SesionPersonalCitasDoctorComponent implements OnInit {
   public opciones: number;
 
   constructor(
-    private citasCard: CitasService,
     private citasProviderServices: CitasProvidersService
   ) {
     this.citaSeleccionada = null;
@@ -31,7 +29,6 @@ export class SesionPersonalCitasDoctorComponent implements OnInit {
     let { height } = window.screen;
     
     this.screenHeight = height;
-    this.citas = this.citasCard.getAllCitas();
   }
 
   setOption(numero: number) { 
