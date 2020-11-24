@@ -26,7 +26,7 @@ export class DoctorProvidersService {
     return this.httpService.post<Doctor>('/doctor/delete', Doctor);
   };
 
-  public patchDoctor(Doctor: any): Partial<Observable<Doctor>>{
-    return this.httpService.post<Doctor>('/doctor/:id', Doctor);
+  public patchDoctor(Doctor: any, idDoctor: any): Partial<Observable<Doctor>>{
+    return this.httpService.post<Doctor>('/doctor/' + idDoctor, Doctor);
   };
 }

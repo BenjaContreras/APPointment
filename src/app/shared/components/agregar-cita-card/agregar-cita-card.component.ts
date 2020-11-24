@@ -54,13 +54,13 @@ export class AgregarCitaCardComponent implements OnInit {
       paciente: this.checkoutForm.get('paciente').value,
       descripcion: this.checkoutForm.get('descripcion').value,
       fechaConsulta: this.checkoutForm.get('fechaConsulta').value,
-      
     };
+    console.log(datosFormulario);
     try {
       await this.citasProviderServices.postCita(datosFormulario).toPromise();
     }
     catch (error) {
-      alert("Error al añadir el contacto");
+      alert("Error al añadir la Cita");
     } 
   }
 

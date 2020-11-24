@@ -16,7 +16,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
-import { HttpProvidersService } from '../core/providers/http/http-providers.service';
 import { DoctorProvidersService } from '../core/providers/doctor/doctor-providers.service';
 
 const Components = [
@@ -44,7 +43,6 @@ const Components = [
   ],
   providers: [
     CitasProvidersService,
-    HttpProvidersService,
     DoctorProvidersService
   ],
   exports: [...Components]

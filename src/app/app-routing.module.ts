@@ -32,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: InicioScreenComponent,
+    redirectTo: 'visitante/inicio-screen',
   },
 ];
 

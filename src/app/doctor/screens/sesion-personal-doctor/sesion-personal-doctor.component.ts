@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { DoctorProvidersService } from 'src/app/core/providers/doctor/doctor-providers.service';
 
 @Component({
@@ -68,6 +69,7 @@ export class SesionPersonalDoctorComponent implements OnInit {
   modificaContrasena() {
     if (this.ModificarContrasena === 'disabled') {
       let doctor = this.doctorProviderServices.getADoctor();
+      // NECESITO OBTENER EL ID Y ENTREGARSELO AL PATCH
       return this.doctorProviderServices.patchDoctor(doctor);
     } else[
       this.ModificarContrasena = 'disabled'

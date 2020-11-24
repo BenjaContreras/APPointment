@@ -17,7 +17,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { ContactanosEspecialPacienteComponent } from './screens/contactanos-especial-paciente/contactanos-especial-paciente.component';
 import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
-import { HttpProvidersService } from '../core/providers/http/http-providers.service';
 import { PacienteProvidersService } from '../core/providers/paciente/paciente-providers.service';
 
 
@@ -48,7 +47,6 @@ const Components = [
   providers: [
     CitasProvidersService,
     PacienteProvidersService,
-    HttpProvidersService
   ],
   exports: [...Components]
 })

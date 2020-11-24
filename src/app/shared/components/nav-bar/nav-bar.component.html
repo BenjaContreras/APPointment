@@ -16,11 +16,10 @@
         <li class="nav-item">
           <a class="nav-link" href="visitante/contactanos-screen"><span><i class="far fa-address-book"></i></span> Contáctanos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="visitante/encuentranos-screen"><span><i class="fas fa-map-marker-alt"></i></span> Encuentranos</a>
+        </li>
       </ul>
-
-      <!--<button type="button" class="btn btn-dark" (click)="navegarinicioSesion()">Identificarse</button>-->
-        
-      <!--agregar ng switch-->
 
         <div [ngSwitch]="getUrl()">
             <p *ngSwitchCase="'/paciente/inicio-sesion-usuario-screen'">
@@ -52,6 +51,9 @@
             </p>
             <p *ngSwitchCase="'/paciente/contactanos-especial-paciente'">
               <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
+            </p>
+            <p *ngSwitchCase="'/visitante/encuentranos-screen'">
+              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarinicioSesion()"> <span><i class="fas fa-user"></i></span> Identificarse</button>
             </p>
             <p *ngSwitchCase="'/visitante/registrarse-screen'">
             </p>

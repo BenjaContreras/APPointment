@@ -12,9 +12,9 @@ import { DoctorModule } from '../doctor/doctor.module';
 import { CoreModule } from '../core/core.module';
 import { VisitanteComponent } from './visitante.component';
 import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
-import { HttpProvidersService } from '../core/providers/http/http-providers.service';
 import { ContactoProvidersService } from '../core/providers/contacto/contacto-providers.service';
 import { PacienteProvidersService } from '../core/providers/paciente/paciente-providers.service';
+import { EncuentranosScreenComponent } from './screens/encuentranos-screen/encuentranos-screen/encuentranos-screen.component';
 
 
 const Components = [
@@ -22,6 +22,7 @@ const Components = [
   InicioScreenComponent,
   RegistrarseScreenComponent,
   ContactanosScreenComponent,
+  EncuentranosScreenComponent
 ];
 
 @NgModule({
@@ -39,7 +40,6 @@ const Components = [
     CitasProvidersService,
     ContactoProvidersService,
     PacienteProvidersService,
-    HttpProvidersService
   ],
   exports: [...Components]
 })
