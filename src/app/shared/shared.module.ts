@@ -9,6 +9,7 @@ import { AgregarCitaCardComponent } from './components/agregar-cita-card/agregar
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CitasProvidersService } from '../core/providers/citas/citas-providers.service';
 import { NavBarAdminComponent } from './components/nav-bar-admin/nav-bar-admin/nav-bar-admin.component';
+import { NavBarIzqAdminComponent } from './components/nav-bar-izq-admin/nav-bar-izq-admin/nav-bar-izq-admin.component';
 
 
 const Components = [
@@ -19,6 +20,7 @@ const Components = [
   EliminarCitaCardComponent,
   AgregarCitaCardComponent,
   NavBarAdminComponent,
+  NavBarIzqAdminComponent
 ];
 
 @NgModule({
