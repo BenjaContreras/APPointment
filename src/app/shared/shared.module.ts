@@ -11,7 +11,6 @@ import { CitasProvidersService } from '../core/providers/citas/citas-providers.s
 import { NavBarAdminComponent } from './components/nav-bar-admin/nav-bar-admin/nav-bar-admin.component';
 import { NavBarIzqAdminComponent } from './components/nav-bar-izq-admin/nav-bar-izq-admin/nav-bar-izq-admin.component';
 
-
 const Components = [
   NavBarComponent,
   NavBarIzqComponent,
@@ -28,7 +27,7 @@ const Components = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     CitasProvidersService,

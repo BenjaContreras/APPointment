@@ -26,18 +26,18 @@ import { EliminarContactoComponent } from './components/CRUD-contacto/eliminar-c
 import { ObtenerContactoComponent } from './components/CRUD-contacto/obtener-contacto/obtener-contacto/obtener-contacto.component';
 import { ObtenerContactoEspecialComponent } from './components/CRUD-contactoEspecial/obtener-contactoEspecial/obtener-contacto-especial/obtener-contacto-especial.component';
 import { AgregarContactoEspecialComponent } from './components/CRUD-contactoEspecial/agregar-contactoEspecial/agregar-contacto-especial/agregar-contacto-especial.component';
-import { ObtenerXRutContactoEspecialComponent } from './components/CRUD-contactoEspecial/obtener-contactoEspecial/obtener-xrut-contacto-especial/obtener-xrut-contacto-especial.component';
 import { EliminarContactoEspecialComponent } from './components/CRUD-contactoEspecial/eliminar-contactoEspecial/eliminar-contacto-especial/eliminar-contacto-especial.component';
 import { ModificarContactoEspecialComponent } from './components/CRUD-contactoEspecial/modificar-contactoEspecial/modificar-contacto-especial/modificar-contacto-especial.component';
 import { AgregarDoctorComponent } from './components/CRUD-doctor/agregar-doctor/agregar-doctor/agregar-doctor.component';
 import { EliminarDoctorComponent } from './components/CRUD-doctor/eliminar-doctor/eliminar-doctor/eliminar-doctor.component';
-import { ObtenerXRutDoctorComponent } from './components/CRUD-doctor/obtener-doctor/obtener-xrut-doctor/obtener-xrut-doctor.component';
 import { ModificarDoctorComponent } from './components/CRUD-doctor/modificar-doctor/modificar-doctor/modificar-doctor.component';
 import { ModificarPacienteComponent } from './components/CRUD-paciente/modificar-paciente/modificar-paciente/modificar-paciente.component';
 import { EliminarPacienteComponent } from './components/CRUD-paciente/eliminar-paciente/eliminar-paciente/eliminar-paciente.component';
 import { ObtenerPacienteComponent } from './components/CRUD-paciente/obtener-paciente/obtener-paciente/obtener-paciente.component';
-import { ObtenerXRutPacienteComponent } from './components/CRUD-paciente/obtener-paciente/obtener-xrut-paciente/obtener-xrut-paciente.component';
 import { AgregarPacienteComponent } from './components/CRUD-paciente/agregar-paciente/agregar-paciente/agregar-paciente.component';
+import { ObtenerXRutPacienteComponent } from './components/CRUD-paciente/obtenerXRut-paciente/obtener-xrut-paciente/obtener-xrut-paciente.component';
+import { ObtenerXRutContactoEspecialComponent } from './components/CRUD-contactoEspecial/obtenerXRut-contactoEspecial/obtener-xrut-contacto-especial/obtener-xrut-contacto-especial.component';
+import { ObtenerXRutDoctorComponent } from './components/CRUD-doctor/obtenerXRut-doctor/obtener-xrut-doctor/obtener-xrut-doctor.component';
 
 const Components = [
   AdminComponent, PacientesScreenComponent,
@@ -48,12 +48,12 @@ const Components = [
   ObtenerCitaComponent, AgregarContactoComponent,
   EliminarContactoComponent, ObtenerContactoComponent,
   ObtenerContactoEspecialComponent, AgregarContactoEspecialComponent,
-  ObtenerXRutContactoEspecialComponent, EliminarContactoEspecialComponent,
+  EliminarContactoEspecialComponent, ObtenerXRutContactoEspecialComponent,
   ModificarContactoEspecialComponent, AgregarDoctorComponent,
-  EliminarDoctorComponent, ObtenerXRutDoctorComponent,
+  EliminarDoctorComponent, ObtenerXRutPacienteComponent,
   ModificarDoctorComponent, ModificarPacienteComponent,
   EliminarPacienteComponent, ObtenerPacienteComponent,
-  ObtenerXRutPacienteComponent, AgregarPacienteComponent
+  AgregarPacienteComponent, ObtenerXRutDoctorComponent,
 ];
 
 @NgModule({
