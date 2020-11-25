@@ -63,7 +63,7 @@ const Components = [
     AdminRoutingModule,
     DoctorModule,
     PacienteModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
     CitasProvidersService,

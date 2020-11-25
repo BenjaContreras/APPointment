@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoEspecialScreenComponent implements OnInit {
 
+  public screenHeight: number;
   constructor() { }
 
   ngOnInit(): void {
+
+    let { height } = window.screen;
+    
+    this.screenHeight = height;
   }
 
 }

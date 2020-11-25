@@ -1,1 +1,142 @@
-<p>nav-bar-izq-admin works!</p>
+<div [ngSwitch]="getUrl()">
+    <!-- RUTA 1-->
+    <div *ngSwitchCase="'/admin/paciente-admin-screen'">
+        <div class="row mt-5">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+            </div>
+        </div>
+    </div>
+    <!-- RUTA 2-->
+    <div *ngSwitchCase="'/admin/doctor-admin-screen'">
+        <div class="row mt-5">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+            </div>
+        </div>
+    </div>
+    <!-- RUTA 3-->
+    <div *ngSwitchCase="'/admin/citas-admin-screen'">
+        <div class="row mt-5">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+            </div>
+        </div>
+    </div>
+    <!-- RUTA 4-->
+    <div *ngSwitchCase="'/admin/contacto-admin-screen'">
+        <div class="row mt-5">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+            </div>
+        </div>
+    </div>
+    <!-- RUTA 5-->
+    <div *ngSwitchCase="'/admin/contactoEspecial-admin-screen'">
+        <div class="row mt-5">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 p-0 mt-3">
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+            </div>
+        </div>
+    </div>
+</div>

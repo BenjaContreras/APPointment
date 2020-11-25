@@ -19,44 +19,21 @@
         <li class="nav-item">
           <a class="nav-link" href="visitante/encuentranos-screen"><span><i class="fas fa-map-marker-alt"></i></span> Encuentranos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/paciente-admin-screen"><span><i class="fas fa-users"></i></span> Pacientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/doctor-admin-screen"><span><i class="fas fa-user-nurse"></i></span> Doctores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/contacto-admin-screen"><span><i class="fas fa-address-book"></i></span> Contactos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/cita-admin-screen"><span><i class="fas fa-calendar-alt"></i></span> Citas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/contactoEspecial-admin-screen"><span><i class="fas fa-address-card"></i></span> Contactos Esp.</a>
+        </li>
       </ul>
-
-        <div [ngSwitch]="getUrl()">
-            <p *ngSwitchCase="'/paciente/inicio-sesion-usuario-screen'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarRegistrarse()"><span><i class="fas fa-user"></i></span> Registrate</button>
-            </p>
-            <p *ngSwitchCase="'/doctor/inicio-sesion-screen'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarRegistrarse()"><span><i class="fas fa-user"></i></span> Registrate</button>
-            </p>
-            <p *ngSwitchCase="'/doctor/sesion-personal-doctor'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase= "'/visitante/inicio-screen'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarinicioSesion()"> <span><i class="fas fa-user"></i></span> Identificarse</button>
-            </p>
-            <p *ngSwitchCase="'/doctor/sesion-personal-citas-doctor'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase="'/doctor/sesion-personal-ayuda-doctor'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase="'/paciente/sesion-personal-citas-paciente'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase="'/paciente/sesion-personal-ayuda-paciente'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase="'/paciente/sesion-personal-paciente'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase="'/paciente/contactanos-especial-paciente'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarCerrarSesion()">Cerrar sesión</button>
-            </p>
-            <p *ngSwitchCase="'/visitante/encuentranos-screen'">
-              <button type="button" class="btn btn-outline-light mt-4" (click)="navegarinicioSesion()"> <span><i class="fas fa-user"></i></span> Identificarse</button>
-            </p>
-            <p *ngSwitchCase="'/visitante/registrarse-screen'">
-            </p>
-        </div>
     </div>
 </nav>

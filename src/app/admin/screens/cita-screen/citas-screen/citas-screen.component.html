@@ -1,1 +1,13 @@
-<p>citas-screen works!</p>
+<app-nav-bar-admin></app-nav-bar-admin>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-2 d-none d-lg-block mt-1 bg-info">
+            <div class="row">
+                <div class="col" [ngStyle]="{'height': screenHeight + 'px'}">
+                    <app-nav-bar-izq-admin></app-nav-bar-izq-admin>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
