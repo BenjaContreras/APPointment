@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cita } from '../../models/citas-card.models';
+import { Cita } from '../../models/cita.model';
 import { HttpService } from '../../services/http/http.service';
 
 @Injectable({

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cita } from 'src/app/core/models/citas-card.models';
+import { Cita } from 'src/app/core/models/cita.model';
 import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 
 @Component({
@@ -24,7 +24,6 @@ export class EliminarCitaCardComponent implements OnInit {
   }
 
   onSubmit() {
-    this.mensaje="Cita eliminada correctamente";
   }
 
   public getUrl(): string{
@@ -32,6 +31,7 @@ export class EliminarCitaCardComponent implements OnInit {
   }
 
   deleteCita(cita: Cita) {
+    this.mensaje="Cita eliminada correctamente";
     return this.citasProviderServices.deleteCita(cita);
   }
 

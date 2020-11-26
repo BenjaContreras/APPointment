@@ -1,0 +1,60 @@
+<div class="card pl-5 pr-5">
+    <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+  
+        <div class="card border-light  bg-info mb-3 mt-5">
+            <div class="card-header ">
+                <h3 class="text-white"> <span><i class="fas fa-calendar-plus"></i></span> Agregar consulta</h3>
+            </div>
+            <div class="card-body bg-light ">
+                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                    <div id='formulario' [ngClass]="{lleno: mensaje}">
+                        <div class="">
+                            <label for="paciente">Paciente</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                    <input id="paciente" name='paciente' class="form-control" type="text" formControlName="paciente" placeholder="Nombre paciente">
+                                    <div id='mensaje'>
+                                        <small id="pacienteHelp" class="form-text text-muted"
+                                            *ngIf="(paciente.dirty || paciente.touched) && paciente.invalid && paciente.errors.required"> Requerido
+                                        </small>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <label for="fechaConsulta">Fecha de la consulta</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input id="fechaConsulta" name='fechaConsulta' class="form-control" type="date" formControlName="fechaConsulta" placeholder="Fecha">
+                                <div id='mensaje'>
+                                    <small id="fechaConsultaHelp" class="form-text text-muted"
+                                        *ngIf="(fechaConsulta.dirty || fechaConsulta.touched) && fechaConsulta.invalid && fechaConsulta.errors.required">
+                                        Requerido 
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                        <label for="descripcion">Descripción</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                    <textarea id="descripcion" name='descripcion' class="form-control" type="text" formControlName="descripcion"
+                                        placeholder="Descripcion">
+                                    </textarea>
+                                <div id='mensaje'>
+                                    <small id="descripcionHelp" class="form-text text-muted"
+                                        *ngIf="(descripcion.dirty || descripcion.touched) && descripcion.invalid && descripcion.errors.required">
+                                        Requerido 
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid"
+                            (click)="postCita()"
+                        >Agregar</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>

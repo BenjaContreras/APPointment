@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Cita } from 'src/app/core/models/citas-card.models';
+import { Cita } from 'src/app/core/models/cita.model';
 import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 
 @Component({

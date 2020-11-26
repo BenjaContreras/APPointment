@@ -3,140 +3,734 @@
     <div *ngSwitchCase="'/admin/paciente-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarAgregarPaciente()" ><span><i class="fas fa-plus"></i></span> Agregar Paciente</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarEliminarPaciente()"><span><i class="fas fa-minus"></i></span> Eliminar Paciente</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarModificarPaciente()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Paciente</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerPaciente()"><span><i class="fas fa-address-book"></i></span> Obtener Pacientes</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerXRutPaciente()"><span><i class="fas fa-user"></i></span> Obtener Paciente</button>
             </div>
         </div>
     </div>
+                    <!-- RUTA 1-->
+                    <div *ngSwitchCase="'/admin/agregar-paciente-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarAgregarPaciente()" ><span><i class="fas fa-plus"></i></span> Agregar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarEliminarPaciente()"><span><i class="fas fa-minus"></i></span> Eliminar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarModificarPaciente()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerPaciente()"><span><i class="fas fa-address-book"></i></span> Obtener Pacientes</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerXRutPaciente()"><span><i class="fas fa-user"></i></span> Obtener Paciente</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 2-->
+                    <div *ngSwitchCase="'/admin/eliminar-paciente-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarAgregarPaciente()" ><span><i class="fas fa-plus"></i></span> Agregar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarEliminarPaciente()"><span><i class="fas fa-minus"></i></span> Eliminar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarModificarPaciente()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerPaciente()"><span><i class="fas fa-address-book"></i></span> Obtener Pacientes</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerXRutPaciente()"><span><i class="fas fa-user"></i></span> Obtener Paciente</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 3-->
+                    <div *ngSwitchCase="'/admin/modificar-paciente-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarAgregarPaciente()" ><span><i class="fas fa-plus"></i></span> Agregar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarEliminarPaciente()"><span><i class="fas fa-minus"></i></span> Eliminar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarModificarPaciente()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerPaciente()"><span><i class="fas fa-address-book"></i></span> Obtener Pacientes</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerXRutPaciente()"><span><i class="fas fa-user"></i></span> Obtener Paciente</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 4-->
+                    <div *ngSwitchCase="'/admin/obtener-paciente-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarAgregarPaciente()" ><span><i class="fas fa-plus"></i></span> Agregar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarEliminarPaciente()"><span><i class="fas fa-minus"></i></span> Eliminar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarModificarPaciente()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerPaciente()"><span><i class="fas fa-address-book"></i></span> Obtener Pacientes</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerXRutPaciente()"><span><i class="fas fa-user"></i></span> Obtener Paciente</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 5-->
+                    <div *ngSwitchCase="'/admin/obtenerPorRut-paciente-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarAgregarPaciente()" ><span><i class="fas fa-plus"></i></span> Agregar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.pacienteServices.navegarEliminarPaciente()"><span><i class="fas fa-minus"></i></span> Eliminar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarModificarPaciente()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Paciente</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerPaciente()"><span><i class="fas fa-address-book"></i></span> Obtener Pacientes</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.pacienteServices.navegarObtenerXRutPaciente()"><span><i class="fas fa-user"></i></span> Obtener Paciente</button>
+                            </div>
+                        </div>
+                    </div>
     <!-- RUTA 2-->
     <div *ngSwitchCase="'/admin/doctor-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarAgregarDoctor()" ><span><i class="fas fa-plus"></i></span> Agregar Doctor</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarEliminarDoctor()"><span><i class="fas fa-minus"></i></span> Eliminar Doctor</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarModificarDoctor()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Doctor</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerDoctor()"><span><i class="fas fa-address-book"></i></span> Obtener Doctores</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerXRutDoctor()"><span><i class="fas fa-user-md"></i></span> Obtener Doctor</button>
             </div>
         </div>
     </div>
+                    <!-- RUTA 1-->
+                    <div *ngSwitchCase="'/admin/agregar-doctor-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarAgregarDoctor()" ><span><i class="fas fa-plus"></i></span> Agregar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarEliminarDoctor()"><span><i class="fas fa-minus"></i></span> Eliminar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarModificarDoctor()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerDoctor()"><span><i class="fas fa-address-book"></i></span> Obtener Doctores</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerXRutDoctor()"><span><i class="fas fa-user-md"></i></span> Obtener Doctor</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 2-->
+                    <div *ngSwitchCase="'/admin/eliminar-doctor-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarAgregarDoctor()" ><span><i class="fas fa-plus"></i></span> Agregar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarEliminarDoctor()"><span><i class="fas fa-minus"></i></span> Eliminar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarModificarDoctor()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerDoctor()"><span><i class="fas fa-address-book"></i></span> Obtener Doctores</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerXRutDoctor()"><span><i class="fas fa-user-md"></i></span> Obtener Doctor</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 3-->
+                    <div *ngSwitchCase="'/admin/modificar-doctor-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarAgregarDoctor()" ><span><i class="fas fa-plus"></i></span> Agregar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarEliminarDoctor()"><span><i class="fas fa-minus"></i></span> Eliminar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarModificarDoctor()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerDoctor()"><span><i class="fas fa-address-book"></i></span> Obtener Doctores</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerXRutDoctor()"><span><i class="fas fa-user-md"></i></span> Obtener Doctor</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 4-->
+                    <div *ngSwitchCase="'/admin/obtener-doctor-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarAgregarDoctor()" ><span><i class="fas fa-plus"></i></span> Agregar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarEliminarDoctor()"><span><i class="fas fa-minus"></i></span> Eliminar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarModificarDoctor()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerDoctor()"><span><i class="fas fa-address-book"></i></span> Obtener Doctores</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerXRutDoctor()"><span><i class="fas fa-user-md"></i></span> Obtener Doctor</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 5-->
+                    <div *ngSwitchCase="'/admin/obtenerPorRut-doctor-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarAgregarDoctor()" ><span><i class="fas fa-plus"></i></span> Agregar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.doctorServices.navegarEliminarDoctor()"><span><i class="fas fa-minus"></i></span> Eliminar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarModificarDoctor()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Doctor</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerDoctor()"><span><i class="fas fa-address-book"></i></span> Obtener Doctores</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.doctorServices.navegarObtenerXRutDoctor()"><span><i class="fas fa-user-md"></i></span> Obtener Doctor</button>
+                            </div>
+                        </div>
+                    </div>
     <!-- RUTA 3-->
     <div *ngSwitchCase="'/admin/citas-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarAgregarCita()" ><span><i class="fas fa-plus"></i></span> Agregar Cita</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarEliminarCita()"><span><i class="fas fa-minus"></i></span> Eliminar Cita</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarModificarCita()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Cita</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
-            </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarObtenerCitas()"><span><i class="fas fa-calendar-check"></i></span> Obtener Citas</button>
             </div>
         </div>
     </div>
+                    <!-- RUTA 1-->
+                    <div *ngSwitchCase="'/admin/agregar-citas-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarAgregarCita()" ><span><i class="fas fa-plus"></i></span> Agregar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarEliminarCita()"><span><i class="fas fa-minus"></i></span> Eliminar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarModificarCita()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarObtenerCitas()"><span><i class="fas fa-calendar-check"></i></span> Obtener Citas</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 2-->
+                    <div *ngSwitchCase="'/admin/eliminar-citas-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarAgregarCita()" ><span><i class="fas fa-plus"></i></span> Agregar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarEliminarCita()"><span><i class="fas fa-minus"></i></span> Eliminar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarModificarCita()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarObtenerCitas()"><span><i class="fas fa-calendar-check"></i></span> Obtener Citas</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 3-->
+                    <div *ngSwitchCase="'/admin/modificar-citas-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarAgregarCita()" ><span><i class="fas fa-plus"></i></span> Agregar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarEliminarCita()"><span><i class="fas fa-minus"></i></span> Eliminar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarModificarCita()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarObtenerCitas()"><span><i class="fas fa-calendar-check"></i></span> Obtener Citas</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 4-->
+                    <div *ngSwitchCase="'/admin/obtener-citas-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarAgregarCita()" ><span><i class="fas fa-plus"></i></span> Agregar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.citasServices.navegarEliminarCita()"><span><i class="fas fa-minus"></i></span> Eliminar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarModificarCita()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Cita</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.citasServices.navegarObtenerCitas()"><span><i class="fas fa-calendar-check"></i></span> Obtener Citas</button>
+                            </div>
+                        </div>
+                    </div>
     <!-- RUTA 4-->
     <div *ngSwitchCase="'/admin/contacto-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarAgregarContacto()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarEliminarContacto()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarModificarContacto()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
-            </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarObtenerContacto()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos</button>
             </div>
         </div>
     </div>
+                    <!-- RUTA 1-->
+                    <div *ngSwitchCase="'/admin/agregar-contacto-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarAgregarContacto()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarEliminarContacto()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarModificarContacto()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarObtenerContacto()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 2-->
+                    <div *ngSwitchCase="'/admin/eliminar-citas-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarAgregarContacto()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarEliminarContacto()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarModificarContacto()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarObtenerContacto()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 3-->
+                    <div *ngSwitchCase="'/admin/modificar-contacto-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarAgregarContacto()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarEliminarContacto()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarModificarContacto()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarObtenerContacto()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 4-->
+                    <div *ngSwitchCase="'/admin/obtener-contacto-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarAgregarContacto()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarEliminarContacto()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarModificarContacto()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoServices.navegarObtenerContacto()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos</button>
+                            </div>
+                        </div>
+                    </div>
     <!-- RUTA 5-->
     <div *ngSwitchCase="'/admin/contactoPersonal-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="pacientes()" ><span><i class="fas fa-users"></i></span> Pacientes</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarAgregarContactoPersonal()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto Esp</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="citas()"><span><i class="fas fa-calendar-alt"></i></span> Citas</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarEliminarContactoPersonal()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto Esp</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="doctor()"><span><i class="fas fa-user-nurse"></i></span> Doctores</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarModificarContactoPersonal()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto Esp</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contacto()"><span><i class="fas fa-address-book"></i></span> Contactos</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerContactoPersonal()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos Esp</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 p-0 mt-3">
-                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="contactoPersonal()"><span><i class="fas fa-address-card"></i></span> Contactos Esp</button>
+                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerXRutContactoPersonal()"><span><i class="fas fa-address-card"></i></span> Obtener Contacto Esp</button>
             </div>
         </div>
     </div>
+                    <!-- RUTA 1-->
+                    <div *ngSwitchCase="'/admin/agregar-contactoPersonal-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarAgregarContactoPersonal()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarEliminarContactoPersonal()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarModificarContactoPersonal()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerContactoPersonal()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerXRutContactoPersonal()"><span><i class="fas fa-address-card"></i></span> Obtener Contacto Esp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 2-->
+                    <div *ngSwitchCase="'/admin/eliminar-contactoPersonal-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarAgregarContactoPersonal()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarEliminarContactoPersonal()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarModificarContactoPersonal()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerContactoPersonal()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerXRutContactoPersonal()"><span><i class="fas fa-address-card"></i></span> Obtener Contacto Esp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 3-->
+                    <div *ngSwitchCase="'/admin/modificar-contactoPersonal-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarAgregarContactoPersonal()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarEliminarContactoPersonal()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarModificarContactoPersonal()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerContactoPersonal()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerXRutContactoPersonal()"><span><i class="fas fa-address-card"></i></span> Obtener Contacto Esp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 4-->
+                    <div *ngSwitchCase="'/admin/obtener-contactoPersonal-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarAgregarContactoPersonal()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarEliminarContactoPersonal()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarModificarContactoPersonal()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerContactoPersonal()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerXRutContactoPersonal()"><span><i class="fas fa-address-card"></i></span> Obtener Contacto Esp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RUTA 5-->
+                    <div *ngSwitchCase="'/admin/obtenerPorRut-contactoPersonal-admin-screen'">
+                        <div class="row mt-5">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarAgregarContactoPersonal()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoEspecialServices.navegarEliminarContactoPersonal()"><span><i class="fas fa-minus"></i></span> Eliminar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarModificarContactoPersonal()"><span><i class="fas fa-exchange-alt"></i></span> Modificar Contacto Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerContactoPersonal()"><span><i class="fas fa-address-book"></i></span> Obtener Contactos Esp</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 p-0 mt-3">
+                                <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5 " (click)="this.contactoEspecialServices.navegarObtenerXRutContactoPersonal()"><span><i class="fas fa-address-card"></i></span> Obtener Contacto Esp</button>
+                            </div>
+                        </div>
+                    </div>
 </div>

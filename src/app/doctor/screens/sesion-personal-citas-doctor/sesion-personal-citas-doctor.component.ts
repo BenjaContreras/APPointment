@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cita } from 'src/app/core/models/citas-card.models';
+import { Cita } from 'src/app/core/models/cita.model';
 import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 import { CitasService } from 'src/app/core/services/citas/citas.service';
 

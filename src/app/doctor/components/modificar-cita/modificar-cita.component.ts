@@ -43,13 +43,6 @@ export class ModificarCitaComponent implements OnInit {
   onSubmit(){
     this.mensaje="Cita modificada correctamente";
     this.isDivVisible = true;
-    this.citasService.modificarCita(this.citaId,
-      {
-        nombrePaciente: this.paciente,
-        descripcion: this.descripcion,
-        fechaSolicitud: this.fechaConsulta,
-      }
-    );
     this.checkoutForm.reset();
   }
 

@@ -4,7 +4,7 @@
             <i class="fas fa-circle" style= "color: #28a745"></i>
                 Realizada
         </div>
-        <div *ngSwitchCase="'rendiente'">
+        <div *ngSwitchCase="'pendiente'">
             <i class="fas fa-circle" style= "color: #ffc107"></i>
                 Pendiente
         </div>
@@ -38,10 +38,9 @@
                 </div>
             </ng-container>
         <div class="card-body text-dark">
-        <h5 class="card-title mb-1">Paciente: </h5>{{cita.nombrePaciente}}
-        <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{cita.fechaSolicitud | date: "d/M/yyyy, h:mm a"}}
+        <h5 class="card-title mb-1">Paciente: </h5>{{cita.paciente}}
+        <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{cita.fechaConsulta | date: "d/M/yyyy, h:mm a"}}
         <p class="font-weight-bold mt-2 mb-1">Descripción: </p>{{cita.descripcion}}
-        <p class="font-weight-bold mt-2 mb-1">ID: </p>{{cita._id}}
         <div class="card-text mt-2 mb-1"
             *ngIf="cita.motivoCancelacion"
         >
@@ -52,5 +51,4 @@
     <!-- body card -->
         </div>
         <!-- color cabeza card -->
-    
 </div>

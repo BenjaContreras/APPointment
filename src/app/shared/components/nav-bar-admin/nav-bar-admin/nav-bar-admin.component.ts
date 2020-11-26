@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CitasService } from 'src/app/core/services/citas/citas.service';
 
 @Component({
   selector: 'app-nav-bar-admin',
@@ -8,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class NavBarAdminComponent implements OnInit {
 
-  constructor(private router:Router) {
-
+  constructor(
+    private router: Router
+  ) {
   }  
   
   
