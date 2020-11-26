@@ -10,41 +10,36 @@ import { ContactoPersonalProvidersService } from 'src/app/core/providers/contact
 })
 export class SesionPersonalAyudaPacienteComponent implements OnInit {
 
-  public screenHeight: number;
   checkoutForm: FormGroup;
-  mensaje: string = "";
+  mensaje:string="";
   isDivVisible = false;
+
 
   constructor(
     private router: Router,
-    private contactoPersonalProviderServices: ContactoPersonalProvidersService
-  ) {
+    private contactoEspecialProviderService: ContactoPersonalProvidersService
+  ) { 
     this.checkoutForm = this.createFormGroup();
   }
 
-
   ngOnInit(): void {
-
-    let { height } = window.screen;
-
-    this.screenHeight = 800;
   }
 
   createFormGroup() {
     return new FormGroup(
       {
-        mail: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
-        nombre: new FormControl('', [Validators.required]),
-        apellido: new FormControl('', [Validators.required]),
-        rut: new FormControl('', [Validators.required]),
-        consulta: new FormControl('', [Validators.required]),
+      mail: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
+      nombre: new FormControl('',[Validators.required]),
+      apellido: new FormControl('',[Validators.required]),
+      rut: new FormControl('', [Validators.required]),
+      consulta: new FormControl('', [Validators.required]),
       }
     );
   }
 
-  onSubmit() {
-    this.mensaje = "Datos enviados";
-    this.isDivVisible = true;
+  onSubmit(){
+    this.mensaje="Datos enviados";
+    this.isDivVisible=true;
   }
 
   get mail() { return this.checkoutForm.get('mail'); }
@@ -55,16 +50,21 @@ export class SesionPersonalAyudaPacienteComponent implements OnInit {
 
   // GUARDAR DATOS EN ARRAY
 
-  public postContacto() { 
+  public async postContacto() { 
     let datosFormulario = {
       mail: this.checkoutForm.get('mail').value,
       nombre: this.checkoutForm.get('nombre').value,
       apellido: this.checkoutForm.get('apellido').value,
       rut: this.checkoutForm.get('rut').value,
-      consulta: this.checkoutForm.get('consulta').value,
+      consulta: this.checkoutForm.get('consulta').value
     };
     console.log(datosFormulario);
-    return this.contactoPersonalProviderServices.addContactoPersonal(datosFormulario);
+    try {
+      await this.contactoEspecialProviderService.addContactoPersonal(datosFormulario).toPromise();
+    }
+    catch (error) {
+      alert("Error al añadir el contacto");
+    }
   }
 
 }
