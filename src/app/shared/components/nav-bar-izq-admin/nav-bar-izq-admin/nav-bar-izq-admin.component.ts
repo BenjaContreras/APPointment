@@ -9,7 +9,7 @@ import { PacientesService } from 'src/app/core/services/pacientes/pacientes.serv
 @Component({
   selector: 'app-nav-bar-izq-admin',
   templateUrl: './nav-bar-izq-admin.component.html',
-  styleUrls: ['./nav-bar-izq-admin.component.css']
+  styleUrls: ['./nav-bar-izq-admin.component.less']
 })
 export class NavBarIzqAdminComponent implements OnInit {
 

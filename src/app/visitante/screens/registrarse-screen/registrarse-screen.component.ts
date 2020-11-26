@@ -7,7 +7,7 @@ import { PacienteProvidersService } from 'src/app/core/providers/paciente/pacien
 @Component({
   selector: 'app-registrarse-screen',
   templateUrl: './registrarse-screen.component.html',
-  styleUrls: ['./registrarse-screen.component.css']
+  styleUrls: ['./registrarse-screen.component.less']
 })
 export class RegistrarseScreenComponent implements OnInit {
 

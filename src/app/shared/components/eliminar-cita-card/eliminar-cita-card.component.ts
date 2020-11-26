@@ -6,7 +6,7 @@ import { CitasProvidersService } from 'src/app/core/providers/citas/citas-provid
 @Component({
   selector: 'app-eliminar-cita-card',
   templateUrl: './eliminar-cita-card.component.html',
-  styleUrls: ['./eliminar-cita-card.component.css']
+  styleUrls: ['./eliminar-cita-card.component.less']
 })
 export class EliminarCitaCardComponent implements OnInit {
 

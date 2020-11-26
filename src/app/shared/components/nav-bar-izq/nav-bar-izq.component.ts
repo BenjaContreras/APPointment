@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav-bar-izq',
   templateUrl: './nav-bar-izq.component.html',
-  styleUrls: ['./nav-bar-izq.component.css']
+  styleUrls: ['./nav-bar-izq.component.less']
 })
 export class NavBarIzqComponent implements OnInit {
 

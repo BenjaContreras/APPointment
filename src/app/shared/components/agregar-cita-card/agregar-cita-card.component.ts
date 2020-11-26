@@ -6,7 +6,7 @@ import { CitasProvidersService } from 'src/app/core/providers/citas/citas-provid
 @Component({
   selector: 'app-agregar-cita-card',
   templateUrl: './agregar-cita-card.component.html',
-  styleUrls: ['./agregar-cita-card.component.css']
+  styleUrls: ['./agregar-cita-card.component.less']
 })
 export class AgregarCitaCardComponent implements OnInit {
 

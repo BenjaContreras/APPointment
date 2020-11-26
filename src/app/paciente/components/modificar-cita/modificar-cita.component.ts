@@ -5,7 +5,7 @@ import { CitasProvidersService } from 'src/app/core/providers/citas/citas-provid
 @Component({
   selector: 'app-modificar-cita',
   templateUrl: './modificar-cita.component.html',
-  styleUrls: ['./modificar-cita.component.css']
+  styleUrls: ['./modificar-cita.component.less']
 })
 export class ModificarCitaComponent implements OnInit {
 

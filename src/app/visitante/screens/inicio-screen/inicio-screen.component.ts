@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-inicio-screen',
   templateUrl: './inicio-screen.component.html',
-  styleUrls: ['./inicio-screen.component.css']
+  styleUrls: ['./inicio-screen.component.less']
 })
 export class InicioScreenComponent implements OnInit {
 

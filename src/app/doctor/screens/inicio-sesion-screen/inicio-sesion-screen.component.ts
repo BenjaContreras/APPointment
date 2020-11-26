@@ -6,7 +6,7 @@ import { DoctorProvidersService } from 'src/app/core/providers/doctor/doctor-pro
 @Component({
   selector: 'app-inicio-sesion-screen',
   templateUrl: './inicio-sesion-screen.component.html',
-  styleUrls: ['./inicio-sesion-screen.component.css']
+  styleUrls: ['./inicio-sesion-screen.component.less']
 })
 export class InicioSesionScreenComponent implements OnInit {
 

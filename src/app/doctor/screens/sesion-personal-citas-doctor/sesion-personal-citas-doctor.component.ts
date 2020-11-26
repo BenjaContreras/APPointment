@@ -7,7 +7,7 @@ import { CitasService } from 'src/app/core/services/citas/citas.service';
 @Component({
   selector: 'app-sesion-personal-citas-doctor',
   templateUrl: './sesion-personal-citas-doctor.component.html',
-  styleUrls: ['./sesion-personal-citas-doctor.component.css']
+  styleUrls: ['./sesion-personal-citas-doctor.component.less']
 })
 export class SesionPersonalCitasDoctorComponent implements OnInit {
 
