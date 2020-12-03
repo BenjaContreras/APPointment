@@ -37,18 +37,18 @@
                 >
                 </div>
             </ng-container>
-        <div class="card-body text-dark">
-        <h5 class="card-title mb-1">Paciente: </h5>{{cita.paciente}}
-        <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{cita.fechaConsulta | date: "d/M/yyyy, h:mm a"}}
-        <p class="font-weight-bold mt-2 mb-1">Descripción: </p>{{cita.descripcion}}
-        <div class="card-text mt-2 mb-1"
-            *ngIf="cita.motivoCancelacion"
-        >
-            <p class="font-weight-bold mt-2 mb-1">Motivo cancelación: </p>{{cita.motivoCancelacion}}
-            <p class="font-weight-bold mt-2 mb-1">Responsable de cancelación: </p>{{cita.personaCancelar}}
-        </div>
-    </div>
-    <!-- body card -->
+            <div class="card-body text-dark">
+                <h5 class="card-title mb-1">Paciente: </h5>{{cita.paciente}}
+                <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{cita.fechaConsulta | date: "d/M/yyyy, h:mm a"}}
+                <p class="font-weight-bold mt-2 mb-1">Descripción: </p>{{cita.descripcion}}
+                <div class="card-text mt-2 mb-1"
+                    *ngIf="cita.motivoCancelacion"
+                >
+                    <p class="font-weight-bold mt-2 mb-1">Motivo cancelación: </p>{{cita.motivoCancelacion}}
+                    <p class="font-weight-bold mt-2 mb-1">Responsable de cancelación: </p>{{cita.personaCancelar}}
+                </div>
+            </div>
+            <!-- body card -->
         </div>
         <!-- color cabeza card -->
 </div>

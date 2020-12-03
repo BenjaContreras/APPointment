@@ -8,6 +8,23 @@
                 </div>
             </div>
         </div>
+        <!-- col-2 izquierda -->
+        <div class="col-lg-10 col-12">
+            <div class="row mt-3">
+                <div class="col-lg-3 col-12"
+                    *ngFor="let contacto of (contactos$ | async)"
+                >
+                    <app-contactos-card
+                        [contacto]="contacto"
+                    >
+                    </app-contactos-card>
+                </div>   
+                <!-- col 3 -->
+            </div>
+        </div>
+        <!-- col-10 central -->
     </div>
+    <!--- row-->
 </div>
+<!-- container -->
 <app-footer></app-footer>

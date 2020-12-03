@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Contacto } from 'src/app/core/models/contacto.model';
+import { ContactoProvidersService } from 'src/app/core/providers/contacto/contacto-providers.service';
 
 @Component({
   selector: 'app-contacto-screen',
@@ -8,13 +11,20 @@ import { Component, OnInit } from '@angular/core';
 export class ContactoScreenComponent implements OnInit {
 
   public screenHeight: number;
-  constructor() { }
+  public contactos$: Observable<Contacto[]>;
+  constructor(
+    private contactoProviderServices: ContactoProvidersService,
+  ) { 
+    this.contactos$ = this.getContacto();
+  }
 
   ngOnInit(): void {
-
-    let { height } = window.screen;
     
+    let { height } = window.screen;
     this.screenHeight = height;
   }
 
+  getContacto() {
+    return this.contactoProviderServices.getAllContactos();
+  }
 }

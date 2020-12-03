@@ -40,8 +40,6 @@ import { PacienteObtenerScreenComponent } from './screens/paciente-obtener-scree
 import { PacienteModificarScreenComponent } from './screens/paciente-modificar-screen/paciente-modificar-screen.component';
 import { PacienteAgregarScreenComponent } from './screens/paciente-agregar-screen/paciente-agregar-screen.component';
 import { PacienteEliminarScreenComponent } from './screens/paciente-eliminar-screen/paciente-eliminar-screen.component';
-import { AgregarCitaCardComponent } from '../shared/components/agregar-cita-card/agregar-cita-card.component';
-import { EliminarCitaCardComponent } from '../shared/components/eliminar-cita-card/eliminar-cita-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -50,6 +48,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { AgregarCitaComponent } from './components/agregar-cita/agregar-cita.component';
 import { ModificarCitaComponent } from './components/modificar-cita/modificar-cita.component';
+import { EliminarCitaComponent } from './components/eliminar-cita/eliminar-cita/eliminar-cita.component';
+import { AgregarContactoComponent } from './components/agregar-contacto/agregar-contacto/agregar-contacto.component';
+import { ModificarContactoComponent } from './components/modificar-contacto/modificar-contacto/modificar-contacto.component';
+import { EliminarContactoComponent } from './components/eliminar-contacto/eliminar-contacto/eliminar-contacto.component';
+import { ContactosCardComponent } from './components/contactos-card/contactos-card/contactos-card.component';
 
 const Components = [
   AdminComponent, PacientesScreenComponent,
@@ -67,11 +70,14 @@ const Components = [
   DoctorModificarScreenComponent, DoctorObtenerxrutScreenComponent,
   PacienteObtenerxrutScreenComponent, PacienteObtenerScreenComponent,
   PacienteModificarScreenComponent, PacienteAgregarScreenComponent,
-  PacienteEliminarScreenComponent
+  PacienteEliminarScreenComponent, AgregarCitaComponent,
+  ModificarCitaComponent, EliminarCitaComponent,
+  AgregarContactoComponent, ModificarContactoComponent,
+  EliminarContactoComponent, ContactosCardComponent
 ];
 
 @NgModule({
-  declarations: [...Components, AgregarCitaComponent, ModificarCitaComponent],
+  declarations: [...Components],
   imports: [
     CommonModule,
     AdminRoutingModule,

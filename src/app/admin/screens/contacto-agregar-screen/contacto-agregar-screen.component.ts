@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { ContactoProvidersService } from 'src/app/core/providers/contacto/contacto-providers.service';
 
 @Component({
@@ -13,58 +12,53 @@ export class ContactoAgregarScreenComponent implements OnInit {
   checkoutForm: FormGroup;
   mensaje:string="";
   isDivVisible = false;
-
+  public screenHeight: number;
 
   constructor(
-    private router: Router,
-    private contactoProviderService: ContactoProvidersService
+    private contactosProviderServices: ContactoProvidersService
   ) { 
     this.checkoutForm = this.createFormGroup();
   }
 
   ngOnInit(): void {
+    
+    let { height } = window.screen;
+    this.screenHeight = height;
   }
 
   createFormGroup() {
     return new FormGroup(
       {
-      mail: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
-      nombre: new FormControl('',[Validators.required]),
-      apellido: new FormControl('',[Validators.required]),
-      rut: new FormControl('', [Validators.required]),
-      consulta: new FormControl('', [Validators.required]),
+        paciente: new FormControl('',[Validators.required]),
+        descripcion: new FormControl('', [Validators.required]),
+        fechaConsulta: new FormControl('', [Validators.required]),
       }
     );
   }
 
   onSubmit(){
+    this.checkoutForm.reset();
   }
 
-  get mail() { return this.checkoutForm.get('mail'); }
-  get nombre() { return this.checkoutForm.get('nombre'); }
-  get apellido() { return this.checkoutForm.get('apellido'); }
-  get rut() { return this.checkoutForm.get('rut'); }
-  get consulta() { return this.checkoutForm.get('consulta'); }
+  get paciente() { return this.checkoutForm.get('paciente').value; }
+  get descripcion() { return this.checkoutForm.get('descripcion').value; }
+  get fechaConsulta() { return this.checkoutForm.get('fechaConsulta').value; }
 
   // GUARDAR DATOS EN ARRAY
 
-  public async postContacto() { 
+  public async addContacto() { 
     let datosFormulario = {
-      mail: this.checkoutForm.get('mail').value,
-      nombre: this.checkoutForm.get('nombre').value,
-      apellido: this.checkoutForm.get('apellido').value,
-      rut: this.checkoutForm.get('rut').value,
-      consulta: this.checkoutForm.get('consulta').value
+      paciente: this.checkoutForm.get('paciente').value,
+      descripcion: this.checkoutForm.get('descripcion').value,
+      fechaConsulta: this.checkoutForm.get('fechaConsulta').value,
     };
-    console.log(datosFormulario);
     try {
-      this.mensaje="Contacto agregado correctamente";
-      this.isDivVisible=true;
-      await this.contactoProviderService.addContacto(datosFormulario).toPromise();
+      this.mensaje="Cita agregada correctamente";
+      this.isDivVisible = true;
+      await this.contactosProviderServices.addContacto(datosFormulario).toPromise();
     }
     catch (error) {
-      alert("Error al añadir el contacto");
-    }
+      alert("Error al añadir la Cita");
+    } 
   }
-
 }

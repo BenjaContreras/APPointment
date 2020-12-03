@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ContactoProvidersService } from 'src/app/core/providers/contacto/contacto-providers.service';
+import { ContactoPersonalProvidersService } from 'src/app/core/providers/contactoPersonal/contacto-personal-providers.service';
+import { Router } from '@angular/router';
+import { CitasProvidersService } from 'src/app/core/providers/citas/citas-providers.service';
 
 @Component({
-  selector: 'app-contacto-eliminar-screen',
-  templateUrl: './contacto-eliminar-screen.component.html',
-  styleUrls: ['./contacto-eliminar-screen.component.css']
+  selector: 'app-eliminar-cita',
+  templateUrl: './eliminar-cita.component.html',
+  styleUrls: ['./eliminar-cita.component.css']
 })
-export class ContactoEliminarScreenComponent implements OnInit {
+export class EliminarCitaComponent implements OnInit {
 
   checkoutForm: FormGroup;
   mensaje:string="";
@@ -15,7 +17,8 @@ export class ContactoEliminarScreenComponent implements OnInit {
   public screenHeight: number;
 
   constructor(
-    private contactoProviderServices: ContactoProvidersService
+    private router: Router,
+    private citasProviderServices: CitasProvidersService
   ) { 
     this.checkoutForm = this.createFormGroup();
   }
@@ -53,7 +56,7 @@ export class ContactoEliminarScreenComponent implements OnInit {
 
   // GUARDAR DATOS EN ARRAY
 
-  public async deleteContacto() { 
+  public async postCita() { 
     let datosFormulario = {
       mail: this.checkoutForm.get('mail').value,
       rut: this.checkoutForm.get('rut').value,
@@ -65,7 +68,7 @@ export class ContactoEliminarScreenComponent implements OnInit {
     try {
       this.mensaje="Su peticion ha sido enviada con exito!";
       this.isDivVisible=true;
-      this.contactoProviderServices.deleteContacto(datosFormulario);
+      await this.citasProviderServices.postCita(datosFormulario).toPromise();
     }
     catch (error) {
       alert("Error al enviar el contacto");

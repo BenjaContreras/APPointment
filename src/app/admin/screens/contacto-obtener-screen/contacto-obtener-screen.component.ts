@@ -10,6 +10,7 @@ import { ContactoProvidersService } from 'src/app/core/providers/contacto/contac
 })
 export class ContactoObtenerScreenComponent implements OnInit {
 
+  public screenHeight: number;
   public contactos$: Observable<Contacto[]>;
   constructor(
     private contactoProviderServices: ContactoProvidersService,
@@ -18,6 +19,9 @@ export class ContactoObtenerScreenComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
+    let { height } = window.screen;
+    this.screenHeight = height;
   }
 
   getContacto() {

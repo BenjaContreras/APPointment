@@ -10,19 +10,19 @@ export class ContactosService {
   }
 
   public navegarAgregarContacto(){
-    this.router.navigate(['/admin/agregar-contacto-agregar-screen']);
+    this.router.navigate(['/admin/agregar-contacto-admin-screen']);
   }
 
   public navegarModificarContacto(){
-    this.router.navigate(['/admin/modificar-contacto-modificar-screen']);
+    this.router.navigate(['/admin/modificar-contacto-admin-screen']);
   }
 
   public navegarEliminarContacto(){
-    this.router.navigate(['/admin/eliminar-contacto-eliminar-screen']);
+    this.router.navigate(['/admin/eliminar-contacto-admin-screen']);
   }
 
   public navegarObtenerContacto(){
-    this.router.navigate(['/admin/obtener-contacto-obtener-screen']);
+    this.router.navigate(['/admin/obtener-contacto-admin-screen']);
   }
 
 }

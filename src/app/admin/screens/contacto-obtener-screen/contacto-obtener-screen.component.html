@@ -1,1 +1,30 @@
-<p>contacto-obtener-screen works!</p>
+<app-nav-bar-admin></app-nav-bar-admin>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-2 d-none d-lg-block mt-1 bg-info">
+            <div class="row">
+                <div class="col" [ngStyle]="{'height': screenHeight + 'px'}">
+                    <app-nav-bar-izq-admin></app-nav-bar-izq-admin>
+                </div>
+            </div>
+        </div>
+        <!-- col-2 izquierda -->
+        <div class="col-lg-10 col-12">
+            <div class="row mt-3">
+                <div class="col-lg-3 col-12"
+                    *ngFor="let contacto of (contactos$ | async)"
+                >
+                    <app-contactos-card
+                        [contacto]="contacto"
+                    >
+                    </app-contactos-card>
+                </div>   
+                <!-- col 3 -->
+            </div>
+        </div>
+        <!-- col-10 central -->
+    </div>
+    <!--- row-->
+</div>
+<!-- container -->
+<app-footer></app-footer>

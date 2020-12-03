@@ -41,6 +41,7 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: 'inicio-admin-screen', component: InicioAdminComponent },
+    
       { path: 'paciente-admin-screen', component: PacientesScreenComponent },
       //DERIVACIONES PACIENTE
           { path: 'agregar-paciente-admin-screen', component: PacienteAgregarScreenComponent },
@@ -48,6 +49,7 @@ const routes: Routes = [
           { path: 'modificar-paciente-admin-screen', component: PacienteModificarScreenComponent },
           { path: 'obtener-paciente-admin-screen', component: PacienteObtenerScreenComponent },
           { path: 'obtenerPorRut-paciente-admin-screen', component: PacienteObtenerxrutScreenComponent },
+    
       { path: 'doctor-admin-screen', component: DoctoresScreenComponent },
       //DERIVACIONES DOCTOR
           { path: 'agregar-doctor-admin-screen', component: DoctorAgregarScreenComponent },
@@ -55,12 +57,14 @@ const routes: Routes = [
           { path: 'modificar-doctor-admin-screen', component: DoctorModificarScreenComponent },
           { path: 'obtener-doctor-admin-screen', component: DoctorObtenerScreenComponent },
           { path: 'obtenerPorRut-doctor-admin-screen', component: DoctorObtenerxrutScreenComponent },
+    
       { path: 'contacto-admin-screen', component: ContactoScreenComponent },
       //DERIVACIONES CONTACO GENERAL
           { path: 'agregar-contacto-admin-screen', component: ContactoAgregarScreenComponent },
           { path: 'eliminar-contacto-admin-screen', component: ContactoEliminarScreenComponent },
           { path: 'modificar-contacto-admin-screen', component: ContactoModificarScreenComponent },
           { path: 'obtener-contacto-admin-screen', component: ContactoObtenerScreenComponent },
+          
       { path: 'contactoPersonal-admin-screen', component: ContactoEspecialScreenComponent },
       //DERIVACIONES CONTACTO PERSONAL
           { path: 'agregar-contactoPersonal-admin-screen', component: ContactoEspecialAgregarScreenComponent },
@@ -68,6 +72,7 @@ const routes: Routes = [
           { path: 'modificar-contactoPersonal-admin-screen', component: ContactoEspecialModificarScreenComponent },
           { path: 'obtener-contactoPersonal-admin-screen', component: ContactoEspecialObtenerScreenComponent },
           { path: 'obtenerPorRut-contactoPersonal-admin-screen', component: ContactoEspecialObtenerxrutScreenComponent },
+    
       { path: 'citas-admin-screen', component: CitasScreenComponent },
       //DERIVACIONES CITA
           { path: 'agregar-citas-admin-screen', component: CitaAgregarScreenComponent },

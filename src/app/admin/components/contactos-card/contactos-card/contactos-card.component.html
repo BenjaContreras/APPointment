@@ -1,0 +1,13 @@
+<div class="card  border-0 mb-3" style="max-width: 100%;">
+    <div class="border border-dark mt-2">
+        <div class="card-header bg-success" style="color: white;">
+        RUT Paciente: {{contacto.rut}}
+        </div>
+        <div class="card-body text-dark">
+            <h5 class="card-title mb-1">Paciente: </h5>{{contacto.nombre}} {{contacto.apellido}}
+            <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{contacto.fechaSolicitud | date: "d/M/yyyy, h:mm a"}}
+            <p class="font-weight-bold mt-2 mb-1">Descripción: </p>{{contacto.consulta}}
+        </div>
+        <!-- body card -->
+    </div>
+</div>

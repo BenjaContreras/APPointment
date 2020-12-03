@@ -1,5 +1,5 @@
 <div [ngSwitch]="getUrl()">
-    <!-- RUTA 1-->
+    <!-- RUTA 1 PACIENTE-->
     <div *ngSwitchCase="'/admin/paciente-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-    <!-- RUTA 2-->
+    <!-- RUTA 2 DOCTOR-->
     <div *ngSwitchCase="'/admin/doctor-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
@@ -335,7 +335,7 @@
                             </div>
                         </div>
                     </div>
-    <!-- RUTA 3-->
+    <!-- RUTA 3 CITAS-->
     <div *ngSwitchCase="'/admin/citas-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
@@ -450,7 +450,7 @@
                             </div>
                         </div>
                     </div>
-    <!-- RUTA 4-->
+    <!-- RUTA 4 CONTACTO-->
     <div *ngSwitchCase="'/admin/contacto-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
@@ -497,7 +497,7 @@
                         </div>
                     </div>
                     <!-- RUTA 2-->
-                    <div *ngSwitchCase="'/admin/eliminar-citas-admin-screen'">
+                    <div *ngSwitchCase="'/admin/eliminar-contacto-admin-screen'">
                         <div class="row mt-5">
                             <div class="col-12 p-0 mt-3">
                                 <button id="boton-barra-lateral" type="button" class="btn btn-outline-light btn-block p-5" (click)="this.contactoServices.navegarAgregarContacto()" ><span><i class="fas fa-plus"></i></span> Agregar Contacto</button>
@@ -565,7 +565,7 @@
                             </div>
                         </div>
                     </div>
-    <!-- RUTA 5-->
+    <!-- RUTA 5 CONTACTO ESPECIAL-->
     <div *ngSwitchCase="'/admin/contactoPersonal-admin-screen'">
         <div class="row mt-5">
             <div class="col-12 p-0 mt-3">
