@@ -53,6 +53,11 @@ import { AgregarContactoComponent } from './components/agregar-contacto/agregar-
 import { ModificarContactoComponent } from './components/modificar-contacto/modificar-contacto/modificar-contacto.component';
 import { EliminarContactoComponent } from './components/eliminar-contacto/eliminar-contacto/eliminar-contacto.component';
 import { ContactosCardComponent } from './components/contactos-card/contactos-card/contactos-card.component';
+import { ContactosEspecialesCardComponent } from './components/contactosEspeciales-card/contactos-especiales-card/contactos-especiales-card.component';
+import { AgregarContactoEspecialComponent } from './components/agregar-contactoEspecial/agregar-contacto-especial/agregar-contacto-especial.component';
+import { EliminarContactoEspecialComponent } from './components/eliminar-contactoEspecial/eliminar-contacto-especial/eliminar-contacto-especial.component';
+import { ModificarContactoEspecialComponent } from './components/modificar-contactoEspecial/modificar-contacto-especial/modificar-contacto-especial.component';
+import { ObtenerRutContactoEspecialComponent } from './components/obtenerRut-contactoEspecial/obtener-rut-contacto-especial/obtener-rut-contacto-especial.component';
 
 const Components = [
   AdminComponent, PacientesScreenComponent,
@@ -77,7 +82,7 @@ const Components = [
 ];
 
 @NgModule({
-  declarations: [...Components],
+  declarations: [...Components, ContactosEspecialesCardComponent, AgregarContactoEspecialComponent, EliminarContactoEspecialComponent, ModificarContactoEspecialComponent, ObtenerRutContactoEspecialComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

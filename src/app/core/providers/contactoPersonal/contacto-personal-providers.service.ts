@@ -26,7 +26,7 @@ export class ContactoPersonalProvidersService {
     return this.httpService.post<ContactoPersonal>('/contactoPersonal/delete', ContactoPersonal);
   };
 
-  public patchContactoPersonal(ContactoPersonal: any, idContactoP): Partial<Observable<ContactoPersonal>>{
-    return this.httpService.post<ContactoPersonal>('/contactoPersonal/' + idContactoP, ContactoPersonal);
+  public patchContactoPersonal(ContactoPersonal: any): Partial<Observable<ContactoPersonal>>{
+    return this.httpService.post<ContactoPersonal>('/contactoPersonal/patch', ContactoPersonal);
   };
 }

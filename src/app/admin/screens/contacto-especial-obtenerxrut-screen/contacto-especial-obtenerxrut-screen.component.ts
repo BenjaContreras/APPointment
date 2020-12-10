@@ -10,18 +10,21 @@ import { ContactoPersonalProvidersService } from 'src/app/core/providers/contact
 })
 export class ContactoEspecialObtenerxrutScreenComponent implements OnInit {
 
-  public contactoEspecial$: Observable<ContactoPersonal>;
+  public screenHeight: number;
+  public contactosEsp$: Observable<ContactoPersonal[]>;
   constructor(
-    private contactoEspecialProviderServices: ContactoPersonalProvidersService,
+    private contactoPersonalProviderServices: ContactoPersonalProvidersService,
   ) { 
-    this.contactoEspecial$ = this.getContactoEspecial();
+    this.contactosEsp$ = this.getContactosPersonales();
   }
 
   ngOnInit(): void {
+    
+    let { height } = window.screen;
+    this.screenHeight = height;
   }
 
-  getContactoEspecial() {
-    return this.contactoEspecialProviderServices.getAContactoPersonal();
+  getContactosPersonales() {
+    return this.contactoPersonalProviderServices.getAllContactoPersonals();
   }
-
 }

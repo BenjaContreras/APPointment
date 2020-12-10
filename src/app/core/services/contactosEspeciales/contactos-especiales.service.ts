@@ -10,23 +10,23 @@ export class ContactosEspecialesService {
   }
 
   public navegarAgregarContactoPersonal(){
-    this.router.navigate(['/admin/agregar-contactoPersonal-agregar-screen']);
+    this.router.navigate(['/admin/agregar-contactoPersonal-admin-screen']);
   }
 
   public navegarModificarContactoPersonal(){
-    this.router.navigate(['/admin/modificar-contactoPersonal-modificar-screen']);
+    this.router.navigate(['/admin/modificar-contactoPersonal-admin-screen']);
   }
 
   public navegarEliminarContactoPersonal(){
-    this.router.navigate(['/admin/eliminar-ontactoPersonal-eliminar-screen']);
+    this.router.navigate(['/admin/eliminar-contactoPersonal-admin-screen']);
   }
 
   public navegarObtenerContactoPersonal(){
-    this.router.navigate(['/admin/obtener-contactoPersonal-obtener-screen']);
+    this.router.navigate(['/admin/obtener-contactoPersonal-admin-screen']);
   }
 
   public navegarObtenerXRutContactoPersonal(){
-    this.router.navigate(['/admin/obtenerPorRut-contactoPersonal-obtenerxrut-screen']);
+    this.router.navigate(['/admin/obtenerPorRut-contactoPersonal-admin-screen']);
   }
 
 }

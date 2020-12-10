@@ -1,1 +1,90 @@
-<p>eliminar-contacto works!</p>
+<div class="card pl-5 pr-5">
+    <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+        <div class="card border-light  bg-info mb-3 mt-5" >
+            <div class="card-header ">
+                <h1 class="text-white"> <span><i class="far fa-times-circle"></i></span> Eliminación de contacto</h1>
+            </div>
+            <div class="card-body bg-light ">
+                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                    <div id='formulario' [ngClass]="{lleno: mensaje}">
+                        <div class="">
+                            <label for="nombre">Nombres</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                    <input id="nombre" name='nombre' class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
+                                    <div id='mensaje'>
+                                        <small id="nombreHelp" class="form-text text-muted"
+                                            *ngIf="(nombre.dirty || nombre.touched) && nombre.invalid && nombre.errors.required"
+                                        > Requerido </small>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="rut">Rut</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input id="rut" name='rut' class="form-control" type="text" formControlName="rut" placeholder="1111111-1">
+                                    <div id='mensaje'>
+                                        <small id="rutHelp" class="form-text text-muted"
+                                            *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"
+                                        > Requerido </small>
+                                    </div>
+                            </div>
+                        </div>
+                    
+                        <div class="mt-3">
+                            <label for="telefono">Telefono</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input id="telefono" name='telefono' class="form-control" type="text" formControlName="telefono" placeholder="Telefono">
+                                    <div id='mensaje'>
+                                        <small id="telefonoHelp" class="form-text text-muted"
+                                            *ngIf="(telefono.dirty || telefono.touched) && telefono.invalid && telefono.errors.required"
+                                        > Requerido </small>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="mail">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input id="mail" name='mail' class="form-control" type="email" formControlName="mail" placeholder="email@example.com">
+                                    <div id='mensaje'>
+                                        <small id="emailHelp" class="form-text text-muted"
+                                            *ngIf="(mail.dirty || mail.touched) && mail.invalid && mail.errors.required"
+                                        > Requerido </small>
+                                        <small id="emailHelp" class="form-text text-muted"
+                                            *ngIf="(mail.dirty || mail.touched) && mail.invalid && mail.errors.pattern"
+                                        >Formato email requerido</small>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="rut">Contraseña</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <mat-icon aria-hidden="false"  aria-label="Password icono" inline=true>https</mat-icon> 
+                                    </span>
+                                </div>
+                                <input id="password" class="form-control" type="password" formControlName="password" placeholder="Password">
+                                <div id='mensaje'>
+                                    <small id="emailHelp" class="form-text text-muted" 
+                                        *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"
+                                    > Requerido </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-info mt-3" type="submit" [disabled]="!checkoutForm.valid"
+                            (click)="deleteContacto()"
+                        >Eliminar</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

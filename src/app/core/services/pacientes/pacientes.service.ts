@@ -10,23 +10,23 @@ export class PacientesService {
   }
 
   public navegarAgregarPaciente(){
-    this.router.navigate(['/admin/agregar-paciente-agregar-screen']);
+    this.router.navigate(['/admin/agregar-paciente-admin-screen']);
   }
 
   public navegarModificarPaciente(){
-    this.router.navigate(['/admin/modificar-paciente-modificar-screen']);
+    this.router.navigate(['/admin/modificar-paciente-admin-screen']);
   }
 
   public navegarEliminarPaciente(){
-    this.router.navigate(['/admin/eliminar-paciente-eliminar-screen']);
+    this.router.navigate(['/admin/eliminar-paciente-admin-screen']);
   }
 
   public navegarObtenerPaciente(){
-    this.router.navigate(['/admin/obtener-paciente-obtener-screen']);
+    this.router.navigate(['/admin/obtener-paciente-admin-screen']);
   }
 
   public navegarObtenerXRutPaciente(){
-    this.router.navigate(['/admin/obtenerPorRut-paciente-obtenerxrut-screen']);
+    this.router.navigate(['/admin/obtenerPorRut-paciente-admin-screen']);
   }
 
 }

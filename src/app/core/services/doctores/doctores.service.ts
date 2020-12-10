@@ -10,23 +10,23 @@ export class DoctoresService {
   }
 
   public navegarAgregarDoctor(){
-    this.router.navigate(['/admin/agregar-doctor-agregar-screen']);
+    this.router.navigate(['/admin/agregar-doctor-admin-screen']);
   }
 
   public navegarModificarDoctor(){
-    this.router.navigate(['/admin/modificar-doctor-modificar-screen']);
+    this.router.navigate(['/admin/modificar-doctor-admin-screen']);
   }
 
   public navegarEliminarDoctor(){
-    this.router.navigate(['/admin/eliminar-doctor-eliminar-screen']);
+    this.router.navigate(['/admin/eliminar-doctor-admin-screen']);
   }
 
   public navegarObtenerDoctor(){
-    this.router.navigate(['/admin/obtener-doctor-obtener-screen']);
+    this.router.navigate(['/admin/obtener-doctor-admin-screen']);
   }
 
   public navegarObtenerXRutDoctor(){
-    this.router.navigate(['/admin/obtenerPorRut-doctor-obtenerxrut-screen']);
+    this.router.navigate(['/admin/obtenerPorRut-doctor-admin-screen']);
   }
 
 }

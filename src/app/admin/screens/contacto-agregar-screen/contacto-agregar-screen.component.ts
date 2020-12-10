@@ -53,12 +53,12 @@ export class ContactoAgregarScreenComponent implements OnInit {
       fechaConsulta: this.checkoutForm.get('fechaConsulta').value,
     };
     try {
-      this.mensaje="Cita agregada correctamente";
+      this.mensaje="Contacto agregado correctamente";
       this.isDivVisible = true;
       await this.contactosProviderServices.addContacto(datosFormulario).toPromise();
     }
     catch (error) {
-      alert("Error al añadir la Cita");
+      alert("Error al añadir el contacto");
     } 
   }
 }

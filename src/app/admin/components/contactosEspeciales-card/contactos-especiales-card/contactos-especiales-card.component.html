@@ -1,0 +1,53 @@
+<div [ngSwitch]="getUrl()">    
+    <div *ngSwitchCase="'/admin/contactoPersonal-admin-screen'">
+        <div class="card  border-0 mb-3" style="max-width: 100%;">
+            <div class="border border-dark mt-2">
+                <div class="card-header bg-dark" style="color: white;">
+                RUT Paciente: {{contactosEsp.rut}}
+                </div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title mb-1">Paciente: </h5>{{contactosEsp.nombrePaciente}}
+                    <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{contactosEsp.fechaSolicitud | date: "d/M/yyyy, h:mm a"}}
+                    <p class="font-weight-bold mt-2 mb-1">Telefono: </p>{{contactosEsp.telefono}}
+                    <p class="font-weight-bold mt-2 mb-1">Email: </p>{{contactosEsp.email}}
+                </div>
+                <!-- body card -->
+            </div>
+        </div>
+    </div>
+    <!-------------------------->
+    <div *ngSwitchCase="'/admin/obtener-contactoPersonal-admin-screen'">
+        <div class="card  border-0 mb-3" style="max-width: 100%;">
+            <div class="border border-dark mt-2">
+                <div class="card-header bg-dark" style="color: white;">
+                RUT Paciente: {{contactosEsp.rut}}
+                </div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title mb-1">Paciente: </h5>{{contactosEsp.nombrePaciente}}
+                    <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{contactosEsp.fechaSolicitud | date: "d/M/yyyy, h:mm a"}}
+                    <p class="font-weight-bold mt-2 mb-1">Telefono: </p>{{contactosEsp.telefono}}
+                    <p class="font-weight-bold mt-2 mb-1">Email: </p>{{contactosEsp.email}}
+                </div>
+                <!-- body card -->
+            </div>
+        </div>
+    </div>
+    <!-------------------------->
+    <div *ngSwitchCase="'/admin/obtenerPorRut-contactoPersonal-admin-screen'">
+        <div class="card  border-0 mb-3" style="max-width: 100%;">
+            <div class="border border-dark mt-2">
+                <div class="card-header bg-dark" style="color: white;">
+                RUT Paciente: {{contactosEsp.rut}}
+                </div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title mb-1">Paciente: </h5>{{contactosEsp.nombrePaciente}}
+                    <p class="font-weight-bold mt-2 mb-1">Fecha consulta: </p>{{contactosEsp.fechaSolicitud | date: "d/M/yyyy, h:mm a"}}
+                    <p class="font-weight-bold mt-2 mb-1">Telefono: </p>{{contactosEsp.telefono}}
+                    <p class="font-weight-bold mt-2 mb-1">Email: </p>{{contactosEsp.email}}
+                    <p class="text-center mt-3"> <button class="btn btn-success mt-3" type="button"> Ver Info</button> </p>
+                </div>
+                <!-- body card -->
+            </div>
+        </div>
+    </div>
+</div>
